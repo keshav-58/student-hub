@@ -1,0 +1,42 @@
+h1{
+    color: black;
+    font-size: 40px;
+    text-shadow: 5px 5px 10px gray;
+    text-align: center;
+}
+.btn-grid{
+    display: grid;
+    grid-template-columns: 500px 500px;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    display: flex;
+   padding: 50px 130px;
+    background-color: lightgreen;
+    cursor: pointer;
+   margin: 20px;
+    outline: none;
+    text-decoration: none;
+    color: rgb(37, 37, 37);
+    border-radius: 48px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 5px 5px 10px grey;
+}
+.btn:hover{
+ animation: bhover 0.3s forwards;
+ box-shadow: 8px 8px 5px grey;
+
+}
+@keyframes bhover {
+    from {
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+        background-color: greenyellow;
+    }
+    
+}
