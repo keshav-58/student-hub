@@ -1,6 +1,6 @@
-import { useState,useEffect } from "react";
+import { useState,useEffect,useRef } from "react";
 
-function Header({setTask,text,setText,editId,setEditId}){
+function Header({setTask,text,setText,editId,setEditId,inputRef}){
     
 
     function inputToTask(event){
@@ -26,12 +26,16 @@ function Header({setTask,text,setText,editId,setEditId}){
     }
     return (
         <>
-        <input value={text} onChange={inputToTask} />
+        <input value={text} onChange={inputToTask} onKeyDown={(event)=>{
+            if(event.key==="Enter"){
+                editId?editTask():addTask()
+            }
+        }} ref={inputRef} />
         <button onClick={editId==null? addTask : editTask}>{editId===null ? "+add" : "save" }</button>
         </>
     )
 }
-function ShowTask({tasks,setCompeleted,text,editId,setEditId,setText}){
+function ShowTask({tasks,setCompeleted,text,editId,setEditId,setText,inputRef}){
 
     return (
         <>
@@ -49,6 +53,7 @@ function ShowTask({tasks,setCompeleted,text,editId,setEditId,setText}){
             function editTask(id,text){
                 setEditId(id);
                 setText(text);
+                inputRef.current.focus()
             }
             return (
                 <div key={task.id}>
@@ -60,7 +65,7 @@ function ShowTask({tasks,setCompeleted,text,editId,setEditId,setText}){
                      return newState;
                     })
                 }}> {task.compeleted?"compeleted":"not compeleted"}</button> 
-                <p>{task.text}</p>
+                <span>{task.text}</span>
                 <button onClick={()=> editTask(task.id,task.text)}>EDIT</button>
                 <button onClick={()=> delTask(task.id)} >DEL</button>
                 </div>
@@ -78,10 +83,11 @@ function Todo(){
         localStorage.setItem("tasks",JSON.stringify(tasks));
 
     },[tasks])
+    const inputRef=useRef(null)
     return (
         <>
-        <Header setTask={setTasks} text={text} setText={setText} editId={editId} setEditId={setEditId} />
-        <ShowTask tasks={tasks} setCompeleted={setTasks} text={text} editId={editId} setEditId={setEditId} setText={setText} />
+        <Header setTask={setTasks} text={text} setText={setText} editId={editId} setEditId={setEditId} inputRef={inputRef} />
+        <ShowTask tasks={tasks} setCompeleted={setTasks} text={text} editId={editId} setEditId={setEditId} setText={setText} inputRef={inputRef} />
         </>
     )
 }
