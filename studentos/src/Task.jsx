@@ -1,25 +1,37 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
-function Header({setTask,text,setText}){
+function Header({setTask,text,setText,editId,setEditId}){
     
 
     function inputToTask(event){
        setText(event.target.value);
     }
     function addTask(){
-        setTask((prev)=> [...prev,{id:crypto.randomUUID(),text:text,compeleted:false}]);
-
+        setTask((prev)=> {
+            const newState=[...prev,{id:crypto.randomUUID(),text:text,compeleted:false}];
+            return newState;
+    });
         setText("");
     }
-    
+    function editTask(){
+        setTask((prev)=>{
+            const newState = prev.map((item)=>
+                editId===item.id?{...item,text:text}:item 
+            )
+            return newState;
+        })
+        setText("")
+        setEditId(null)
+
+    }
     return (
         <>
         <input value={text} onChange={inputToTask} />
-        <button onClick={addTask}>+Task</button>
+        <button onClick={editId==null? addTask : editTask}>{editId===null ? "+add" : "save" }</button>
         </>
     )
 }
-function ShowTask({tasks,setCompeleted,text}){
+function ShowTask({tasks,setCompeleted,text,editId,setEditId,setText}){
 
     return (
         <>
@@ -27,30 +39,29 @@ function ShowTask({tasks,setCompeleted,text}){
          tasks.map((task,index)=>{
 
             function delTask(id){
-                setCompeleted(prev=>
-                    prev.filter(item=> 
+                setCompeleted(prev=>{
+                   const newState= prev.filter(item=> 
                         item.id!==id
                     )
-                )
+                    return newState;
+             } )
             } 
-            function editTask(id){
-                setCompeleted(prev=>
-                    prev.map(item=>
-                        item.id===id?{...item,text:text}:item
-                    )
-                )
+            function editTask(id,text){
+                setEditId(id);
+                setText(text);
             }
             return (
                 <div key={task.id}>
                 <button onClick={()=>{
                     setCompeleted( (prev) =>{
-                        return prev.map((item)=>{
-                            return item.id === task.id?{...item,compeleted:!item.compeleted}:item
+                        const newState= prev.map((item)=>{
+                            return item.id === task.id?{...item,compeleted:!item.compeleted}:item 
                      } )
+                     return newState;
                     })
-                }}></button> 
+                }}> {task.compeleted?"compeleted":"not compeleted"}</button> 
                 <p>{task.text}</p>
-                <button onClick={()=> editTask(task.id)}>EDIT</button>
+                <button onClick={()=> editTask(task.id,task.text)}>EDIT</button>
                 <button onClick={()=> delTask(task.id)} >DEL</button>
                 </div>
             )
@@ -60,12 +71,17 @@ function ShowTask({tasks,setCompeleted,text}){
     )
 }
 function Todo(){
-    const [tasks,setTasks]=useState([]);
+    const [tasks,setTasks]=useState(JSON.parse(localStorage.getItem("tasks"))||[]);
     const[text,setText]=useState("");
+    const [editId,setEditId]=useState(null);
+    useEffect(()=>{
+        localStorage.setItem("tasks",JSON.stringify(tasks));
+
+    },[tasks])
     return (
         <>
-        <Header setTask={setTasks} text={text} setText={setText} />
-        <ShowTask tasks={tasks} setCompeleted={setTasks} text={text} />
+        <Header setTask={setTasks} text={text} setText={setText} editId={editId} setEditId={setEditId} />
+        <ShowTask tasks={tasks} setCompeleted={setTasks} text={text} editId={editId} setEditId={setEditId} setText={setText} />
         </>
     )
 }
