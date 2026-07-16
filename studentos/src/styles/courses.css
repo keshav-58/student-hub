@@ -1,0 +1,38 @@
+.btn-all{
+    display: grid;
+    grid-template-columns: 500px 500px 500px;
+    justify-content: center;
+    align-items: center;
+}
+.btn-each{
+    display: flex;
+    height: 240px;
+    width: 440px;
+    background-color: pink;
+    cursor: pointer;
+   margin: 20px;
+    outline: none;
+    text-decoration: none;
+    color: rgb(37, 37, 37);
+    border-radius: 48px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-align: center;
+    box-shadow: 5px 5px 10px grey;
+}
+.btn-each:hover{
+ animation: b2hover 0.3s forwards;
+ box-shadow: 8px 8px 5px grey;
+
+}
+@keyframes b2hover {
+    from {
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+        background-color: rgba(255, 192, 203, 0.441);
+    }
+    
+}

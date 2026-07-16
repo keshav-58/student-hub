@@ -9,7 +9,7 @@ import {Progress} from './Progress.jsx'
 import {Task} from './Task.jsx'
 import {Calculator} from './Calculator.jsx'
 import {Courses} from './Courses.jsx'
-
+import {Coursespg} from './Coursespage.jsx'
 function App() {
     return (
   <Routes>
@@ -19,7 +19,7 @@ function App() {
     <Route path='/Task' element={<Task />} />
     <Route path='/Calculator' element={<Calculator />} />
     <Route path='/Courses' element={<Courses />} />
-    
+    <Route path='/Coursespage/:id' element={<Coursespg />} />
   </Routes>
   )
 }

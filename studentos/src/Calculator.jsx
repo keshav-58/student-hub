@@ -40,6 +40,8 @@ export function Calculator(){
     const [answer,setAnswer]=useState("")
     const buttonValues= ["1","2","3","+","4","5","6","-","7","8","9",,"C","*","0","/","="]
     return <>
+        <h1>CALCULATOR</h1>
+        <hr></hr>
         <div  className='flex items-center justify-center flex-col gap-4 mt-12'>
             <div className=' bg-purple-400 rounded-md p-4'>
                 <Header answer={answer} setAnswer={setAnswer} />

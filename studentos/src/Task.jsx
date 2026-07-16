@@ -123,7 +123,12 @@ function Todo(){
 export function Task(){
     
     return (
+        <>
+        <h1>TO-DO</h1>
+        <hr></hr>
         <Todo />
+        </>
+        
     )
 
 }
