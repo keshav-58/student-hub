@@ -9,7 +9,7 @@ export function Courses(){
     useEffect(()=>{
         async function courseCards() {
 
-            const res=await fetch("/roadmaps/roadmaps.json")
+            const res=await fetch(`${import.meta.env.BASE_URL}roadmaps/roadmaps.json`)
             const data=await res.json()
             setCourse(data)
             

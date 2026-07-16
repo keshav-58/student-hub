@@ -16,7 +16,7 @@ export function Coursespg(){
     const {id}=useParams()
     useEffect(()=>{
         async function courseData() {
-            const res=await fetch("/roadmaps/roadmaps.json")
+            const res=await fetch(`${import.meta.env.BASE_URL}roadmaps/roadmaps.json`)
             const fullData=await res.json()
             const req=fullData.categories.find(item=>item.id==id)
             setData(req)
