@@ -1,3 +1,8 @@
 export function Progress(){
-    return <h1>pro</h1>
+    return (
+        <>
+            <h1>work in progress</h1>
+            <hr/>
+        </>
+    )
 }

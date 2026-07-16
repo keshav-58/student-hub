@@ -2,6 +2,7 @@ import {useState,useEffect} from "react"
 import {Link} from 'react-router-dom'
 import './styles/courses.css'
 
+
 export function Courses(){
     const [course,setCourse]=useState()
 
@@ -31,9 +32,9 @@ export function Courses(){
         <div className='btn-all' >
 
        {
-            course.categories.map((item)=>{
-                   return <Link key={item.id} to={`/coursespage/${item.id}` } className='btn-each' >{item.title}</Link>
-                })
+        course.categories.map((item)=>{
+            return <Link key={item.id} to={`/coursespage/${item.id}` } className='btn-each' >{item.title}</Link>
+        })
     }
         </div>
         </>
