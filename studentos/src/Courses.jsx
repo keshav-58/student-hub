@@ -21,22 +21,38 @@ export function Courses(){
     },[])   
 
     if(!course){
-        return(<div className=" flex items-center justify-center h-screen " >
-            <div className="w-[80px] h-[80px] border-8 rounded-full border-gray-300 border-t-blue-500 animate-spin  " ></div>
-        </div>)
+        return(
+            <div className=" flex items-center justify-center h-screen " >
+                <div className="w-[80px] h-[80px] border-8 rounded-full border-gray-300 border-t-blue-500 animate-spin " />
+            </div>
+            )
     }
     return (
-        <>
-        <h1>COURSES</h1>
-        <hr></hr>
-        <div className='btn-all' >
+        <div className="min-h-screen bg-gray-100 transition-all duration-200">
+            <div className="max-w-7xl mx-auto p-6 mb-8" >
+                <h1 className="text-4xl font-bold tracking-tight text-gray-900 ">COURSES</h1>
+                <p className="mt-2 text-gray-500 mb-4 text-lg ">Choose a roadmap to learn</p>
+                <div className='grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4  ' >
 
-       {
-        course.categories.map((item)=>{
-            return <Link key={item.id} to={`/coursespage/${item.id}` } className='btn-each' >{item.title}</Link>
-        })
-    }
+                {
+                    course.categories.map((item)=>{
+                        return (
+                        <Link 
+                            key={item.id} to={`/coursespage/${item.id}` } 
+                            className='rounded-xl border py-6 px-5 
+                                        shadow-sm bg-white border-gray-200 
+                                        hover:border-blue-500 hover:bg-blue-50 hover:shadow-md hover:-translate-y-1
+                                        active:scale-95  active:translate-y-1' 
+                            >
+                                <span className="text-2xl mb-2 block">{item.icon}</span>
+                                <h2 className="text-lg font-semibold text-gray-900" >{item.title}</h2>
+                                <p className="mt-2 text-sm text-gray-500" >{item.description}</p>
+                        </Link>
+                        )
+                    })
+                }
         </div>
-        </>
+        </div>
+        </div>
     )
 }

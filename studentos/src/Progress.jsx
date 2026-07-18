@@ -1,3 +1,5 @@
+import {useState,useEffect} from "react"
+
 export function Progress(){
     return (
         <>
@@ -5,4 +7,4 @@ export function Progress(){
             <hr/>
         </>
     )
-}
+} 

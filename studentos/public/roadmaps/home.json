@@ -1,0 +1,90 @@
+{
+    "app": {
+    "name": "Student Hub",
+    "slug": "student-hub",
+    "version": "1.0.0",
+    "description": "A student operating system hub for learning, planning, tracking progress, and staying organized.",
+    "tagline": "Learn. Track. Build. Repeat.",
+    "theme": {
+      "mode": "light",
+      "background": "gray-100",
+      "surface": "white",
+      "border": "gray-200",
+      "accent": "blue-600",
+      "text": "gray-900",
+      "mutedText": "gray-500"
+    }
+  },
+"navigation": [
+    {
+      "id": 1,
+      "title": "Courses",
+      "icon": "📚",
+      "link": "/Courses",
+      "description": "Learning roadmaps"
+    },
+    {
+      "id": 2,
+      "title": "Progress",
+      "icon": "📈",
+      "link": "/Progress",
+      "description": "Track growth"
+    },
+    {
+      "id": 3,
+      "title": "Tasks",
+      "icon": "✅",
+      "link": "/Task",
+      "description": "Daily to-do list"
+    },
+    {
+      "id": 4,
+      "title": "Calculator",
+      "icon": "🧮",
+      "link": "/Calculator",
+      "description": "Quick utilities"
+    },
+    {
+      "id": 5,
+      "title": "Timetable",
+      "icon": "🗓️",
+      "link": "/Timetable",
+      "description": "Weekly schedule"
+    },
+    {
+      "id": 6,
+      "title": "Notes",
+      "icon": "📝",
+      "link": "/Notes",
+      "description": "Personal notes"
+    },
+    {
+      "id": 7,
+      "title": "Resources",
+      "icon": "🔗",
+      "link": "/Resources",
+      "description": "Useful links"
+    },
+    {
+      "id": 8,
+      "title": "Achievements",
+      "icon": "🏆",
+      "link": "/Achievements",
+      "description": "Milestones"
+    },
+    {
+      "id": 9,
+      "title": "Finance",
+      "icon": "💰",
+      "link": "/Finance",
+      "description": "Budget & expenses"
+    },
+    {
+      "id": 10,
+      "title": "Settings",
+      "icon": "⚙️",
+      "link": "/Settings",
+      "description": "Customize app"
+    }
+    ]
+}
