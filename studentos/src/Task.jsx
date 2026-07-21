@@ -47,7 +47,7 @@ function Header({setTask,text,setText,editId,setEditId,inputRef,tasks}){
             if(event.key==="Enter"){
                 editId?editTask():addTask()
             }
-        }} ref={inputRef} className="border rounded-2xl flex-1 h-14 w-full pl-3 text-xl" />
+        }} ref={inputRef} className="border rounded-2xl flex-1 h-14 w-full pl-3 px-5 text-xl" />
         <button onClick={editId==null? addTask : editTask} 
         className="border-2 h-14 w-32 rounded-2xl flex justify-center items-center 
         border-blue-50 bg-blue-500 text-white font-extrabold transition-all duration-150
