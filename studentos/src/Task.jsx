@@ -31,7 +31,7 @@ function Header({setTask,text,setText,editId,setEditId,inputRef}){
 
     }
     return (
-        <div className="flex justify-center max-w-4xl mx-auto items-center gap-8 p-6">
+        <div className="flex justify-centerflex-cols sm:flex-row max-w-4xl mx-auto items-center gap-4 sm:gap-8 p-6">
         <input placeholder="Task" value={text} onChange={inputToTask} onKeyDown={(event)=>{
             if(event.key==="Enter"){
                 editId?editTask():addTask()
@@ -41,7 +41,7 @@ function Header({setTask,text,setText,editId,setEditId,inputRef}){
         className="border-2 h-14 w-30 rounded-2xl flex justify-center items-center 
         border-blue-50 bg-blue-500 text-white font-extrabold transition-all duration-150
         hover:bg-blue-400 hover:border-blue-50  hover:font-black 
-        active:bg-blue-600 active:border-blue-200 active:translate-y-[1px] "
+        active:bg-blue-600 active:border-blue-200 active:translate-y-1 "
         >{editId===null ? "+ADD" : "SAVE" }</button>
         </div>
     )
@@ -118,20 +118,32 @@ function Counts({tasks}){
         })
         let total=tasks.length
         return(
-            <div className="flex flex-col justify-center">
-                <div className="mr-4">
-                    <button className="w-14 h-14 rounded-full border border-2 border-blue-600 bg-blue-500 shadow-sm
-                    hover:bg-blue-600 hover:border-blue-400 hover:-translate-y-1 hover:shadow-md
-                    hover:">{total}</button>
+            <div className="flex flex-row-reverse gap-4">
+                <div>
+                    <button className="w-8 h-8 rounded-full border border-2 border-red-600 bg-red-500 shadow-sm
+                    hover:bg-red-600 hover:border-red-400 hover:-translate-y-1 hover:shadow-md text-white
+                    hover:">{total-count}
+                    </button>
+                    <span className="p-2 text-bold text-lg">Left
+                    </span>
                 </div>
                 <div>
-                    <button className="w-12 h-12 rounded-full border border-2 border-green-600 bg-green-500 shadow-sm
-                    hover:bg-green-600 hover:border-green-400 hover:-translate-y-1 hover:shadow-md
-                    hover:">{count}</button>
-                    <button className="w-12 h-12 rounded-full border border-2 border-red-600 bg-red-500 shadow-sm
-                    hover:bg-red-600 hover:border-red-400 hover:-translate-y-1 hover:shadow-md
-                    hover:">{total-count}</button>
+                    <button className="w-8 h-8 rounded-full border border-2 border-green-600 bg-green-500 shadow-sm
+                    hover:bg-green-600 hover:border-green-400 hover:-translate-y-1 hover:shadow-md text-white
+                    hover:">{count}
+                    </button>
+                    <span className="p-2 text-bold text-lg">Completed
+                    </span>
                 </div>
+                <div>
+                    <button className="w-8 h-8 rounded-full border border-2 border-blue-600 bg-blue-500 shadow-sm
+                    hover:bg-blue-600 hover:border-blue-400 hover:-translate-y-1 hover:shadow-md text-white
+                    hover:">{total}
+                    </button>
+                    <span className="p-2 text-bold text-lg">Total
+                    </span>
+                </div>
+                
             </div>
         )
 }
