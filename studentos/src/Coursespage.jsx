@@ -30,7 +30,7 @@ function Block({idx,item,comp,setComp}){
     return (
         <div className="flex flex-col gap-2 border border-gray-200 rounded-lg border-4 shadow-md transition-all
                         duration-200">
-            <div className="bg-slate-100 p-4 h-full border border-gray-200 rounded-lg border-4
+            <div className="bg-slate-100 p-8 h-full border border-gray-200 rounded-lg border-4
                             hover:border-blue-400 hover:scale-105 hover:shadow-lg">
                 <h1 className="font-semibold tracking-tighter text-4xl text-center mb-2">{idx}. {item.title}</h1>
                 {    
@@ -130,7 +130,7 @@ export function Coursespg(){
     }
     return (
         <div className="min-h-screen bg-gray-100">
-            <div className="mx-auto max-w-7xl pt-4">
+            <div className="mx-auto max-w-7xl p-4 pt-4">
                 <h1 className="font-bold tracking-tighter text-4xl text-center mb-5">{data.title}</h1>
                 < ShowData sec={data.sections} id={id} saved={saved} setSaved={setSaved} comp={comp} setComp={setComp} />
             </div>
