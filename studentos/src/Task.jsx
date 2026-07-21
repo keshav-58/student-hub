@@ -11,11 +11,13 @@ function Header({setTask,text,setText,editId,setEditId,inputRef,tasks}){
             alert("input is empty")
             return
         }
-        if(tasks.length>100){
+        if(tasks.length>=100){
             alert("maximum storage reached")
             return
         }
-        if(tasks.some(task=>task.text===text)){
+        if(tasks.some(task=>
+                task.text.toLowercase()===text.trim().toLowercase()
+            )){
             alert("task already exist")
             return
         }
@@ -31,7 +33,7 @@ function Header({setTask,text,setText,editId,setEditId,inputRef,tasks}){
         }
         setTask((prev)=>{
             const newState = prev.map((item)=>
-                editId===item.id?{...item,text:text}:item 
+                editId===item.id?{...item,text:text.trim()}:item 
             )
             return newState;
         })
@@ -40,12 +42,12 @@ function Header({setTask,text,setText,editId,setEditId,inputRef,tasks}){
 
     }
     return (
-        <div className="flex justify-centerflex-cols sm:flex-row max-w-4xl mx-auto items-center gap-4 sm:gap-8 p-6">
+        <div className="flex justify-center flex-col sm:flex-row max-w-4xl mx-auto items-center gap-4 sm:gap-8 p-6">
         <input placeholder="Task" value={text} onChange={inputToTask} onKeyDown={(event)=>{
             if(event.key==="Enter"){
                 editId?editTask():addTask()
             }
-        }} ref={inputRef} className="border rounded-2xl flex-1 h-14 pl-3 text-xl" />
+        }} ref={inputRef} className="border rounded-2xl flex-1 h-14 w-full pl-3 text-xl" />
         <button onClick={editId==null? addTask : editTask} 
         className="border-2 h-14 w-32 rounded-2xl flex justify-center items-center 
         border-blue-50 bg-blue-500 text-white font-extrabold transition-all duration-150
@@ -131,25 +133,25 @@ function Counts({tasks}){
                 <div>
                     <button className="w-8 h-8 rounded-full border border-2 border-red-600 bg-red-500 shadow-sm
                     hover:bg-red-600 hover:border-red-400 hover:-translate-y-1 hover:shadow-md text-white
-                    hover:">{total-count}
+                    ">{total-count}
                     </button>
-                    <span className="p-2 text-bold text-lg">Left
+                    <span className="p-2 font-semibold text-lg">Left
                     </span>
                 </div>
                 <div>
                     <button className="w-8 h-8 rounded-full border border-2 border-green-600 bg-green-500 shadow-sm
                     hover:bg-green-600 hover:border-green-400 hover:-translate-y-1 hover:shadow-md text-white
-                    hover:">{count}
+                    ">{count}
                     </button>
-                    <span className="p-2 text-bold text-lg">Completed
+                    <span className="p-2 font-semibold text-lg">Completed
                     </span>
                 </div>
                 <div>
                     <button className="w-8 h-8 rounded-full border border-2 border-blue-600 bg-blue-500 shadow-sm
                     hover:bg-blue-600 hover:border-blue-400 hover:-translate-y-1 hover:shadow-md text-white
-                    hover:">{total}
+                    ">{total}
                     </button>
-                    <span className="p-2 text-bold text-lg">Total
+                    <span className="p-2 font-semibold text-lg">Total
                     </span>
                 </div>
                 
