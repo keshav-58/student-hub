@@ -91,10 +91,10 @@ function ShowTask({tasks,setCompeleted,text,editId,setEditId,setText,inputRef}){
                                             ${task.compeleted?"line-through text-gray-400"
                                             :""}`}>{task.text}</span>
                         <div className="flex gap-2 ml-auto">
-                            <button onClick={()=> editTask(task.id,task.text)} className="bg-amber-500 text-white 
+                            <button onClick={()=> editTask(task.id,task.text)} className="bg-blue-500 text-white 
                                 border w-24 p-4 rounded-xl shadow-sm
-                                hover:bg-amber-400 hover:shadow-lg
-                                active:bg-amber-600  active:translate-y-[1px] active:shadow-xl" 
+                                hover:bg-blue-400 hover:shadow-lg
+                                active:bg-blue-600  active:translate-y-[1px] active:shadow-xl" 
                                 >EDIT</button>
                             <button onClick={()=> delTask(task.id)}  className="bg-red-500 text-white 
                                 border w-24 p-4 rounded-xl shadow-sm
