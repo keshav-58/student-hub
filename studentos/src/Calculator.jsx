@@ -4,8 +4,8 @@ function Header({answer,setAnswer}){
     return(
     <div className="flex items-center justify-center mb-4">
      <input readOnly placeholder='2+2=4' value={answer} type='text'
-        className='bg-slate-900 text-white rounded-2xl border border-slate-700 w-full h-24 px-6 
-        outline-none text-3xl text-right' />
+        className='bg-slate-900 text-white rounded-2xl border border-slate-700 w-full h-20 md:h-24 px-6 
+        outline-none text=2xl md:text-3xl text-right' />
      </div>
     )
 }
@@ -130,7 +130,7 @@ function Buttons({buttonValues,answer,setAnswer}){
             onClick={()=>logic(nums)} 
 
             className={`
-                h-20 rounded-2xl text-white font-semibold transition-all duration-300
+                h-16 md:h-20 rounded-2xl text-white font-semibold transition-all duration-300
                 ${
                     nums==="="?"bg-emerald-500 hover:bg-emerald-600 col-span-2":
                     nums==="C"?"bg-red-500 hover:bg-red-600":
@@ -151,10 +151,10 @@ export function Calculator(){
     const [answer,setAnswer]=useState("")
     const buttonValues= ["C","⌫",".","+","7","8","9","*","4","5","6","-","1","2","3","/","0","="]
     return <div className='min-h-screen bg-slate-100'>
-        <div className='max-w-7xl mx-auto p-6'>
+        <div className='max-w-7xl mx-auto px-4 py-6'>
             <h1 className='text-4xl font-bold tracking-tight text-slate-900 text-center'>CALCULATOR</h1>
             <div  className='flex items-center justify-center  flex-col gap-4 mt-8'>
-                <div className='bg-slate-800 rounded-3xl shadow-2xl p-6 w-[430px]'>
+                <div className='bg-slate-800 rounded-3xl shadow-2xl p=4 md:p-6 w-full max-w-[430px]'>
                     <Header answer={answer} setAnswer={setAnswer} />
                     <Buttons buttonValues={buttonValues} answer={answer} setAnswer={setAnswer} />
                 </div>
