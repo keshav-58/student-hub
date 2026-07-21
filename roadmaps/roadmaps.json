@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "2.1",
   "generatedFor": "learning-roadmap-hub",
   "categories": [
     {
@@ -21,34 +21,41 @@
             {
               "name": "How the web works",
               "done": false,
-              "outcome": "Understand clients, servers, requests, responses, and hosting."
+              "outcome": "Understand clients, servers, requests, responses, and hosting.",
+              "id": 10101
             },
             {
               "name": "HTML document structure",
               "done": false,
-              "outcome": "Know head, body, metadata, and script/style placement."
+              "outcome": "Know head, body, metadata, and script/style placement.",
+              "id": 10102
             },
             {
               "name": "Browser rendering basics",
               "done": false,
-              "outcome": "Understand how HTML, CSS, and JS become pixels."
+              "outcome": "Understand how HTML, CSS, and JS become pixels.",
+              "id": 10103
             },
             {
               "name": "Git and GitHub basics",
               "done": false,
-              "outcome": "Create commits, branches, push, pull, and PRs."
+              "outcome": "Create commits, branches, push, pull, and PRs.",
+              "id": 10104
             },
             {
               "name": "Command line basics",
               "done": false,
-              "outcome": "Navigate folders and run project commands."
+              "outcome": "Navigate folders and run project commands.",
+              "id": 10105
             },
             {
               "name": "Package managers",
               "done": false,
-              "outcome": "Use npm and understand package.json."
+              "outcome": "Use npm and understand package.json.",
+              "id": 10106
             }
-          ]
+          ],
+          "id": 101
         },
         {
           "title": "HTML",
@@ -56,39 +63,47 @@
             {
               "name": "Semantic elements",
               "done": false,
-              "outcome": "Use header, nav, main, section, article, footer correctly."
+              "outcome": "Use header, nav, main, section, article, footer correctly.",
+              "id": 10201
             },
             {
               "name": "Text and media tags",
               "done": false,
-              "outcome": "Use headings, paragraphs, links, images, audio, and video."
+              "outcome": "Use headings, paragraphs, links, images, audio, and video.",
+              "id": 10202
             },
             {
               "name": "Lists and tables",
               "done": false,
-              "outcome": "Create ordered, unordered, definition lists, and tables."
+              "outcome": "Create ordered, unordered, definition lists, and tables.",
+              "id": 10203
             },
             {
               "name": "Forms and inputs",
               "done": false,
-              "outcome": "Build login forms, contact forms, and validations."
+              "outcome": "Build login forms, contact forms, and validations.",
+              "id": 10204
             },
             {
               "name": "Accessibility basics",
               "done": false,
-              "outcome": "Use labels, alt text, roles, and keyboard-friendly markup."
+              "outcome": "Use labels, alt text, roles, and keyboard-friendly markup.",
+              "id": 10205
             },
             {
               "name": "SEO basics",
               "done": false,
-              "outcome": "Use title, meta tags, semantic structure, and headings well."
+              "outcome": "Use title, meta tags, semantic structure, and headings well.",
+              "id": 10206
             },
             {
               "name": "HTML5 APIs",
               "done": false,
-              "outcome": "Know localStorage, geolocation, and basic browser APIs."
+              "outcome": "Know localStorage, geolocation, and basic browser APIs.",
+              "id": 10207
             }
-          ]
+          ],
+          "id": 102
         },
         {
           "title": "CSS",
@@ -96,54 +111,65 @@
             {
               "name": "Selectors and specificity",
               "done": false,
-              "outcome": "Understand how CSS rules win or lose."
+              "outcome": "Understand how CSS rules win or lose.",
+              "id": 10301
             },
             {
               "name": "Box model",
               "done": false,
-              "outcome": "Master margin, border, padding, and content."
+              "outcome": "Master margin, border, padding, and content.",
+              "id": 10302
             },
             {
               "name": "Display types",
               "done": false,
-              "outcome": "Know block, inline, inline-block, flex, grid, none."
+              "outcome": "Know block, inline, inline-block, flex, grid, none.",
+              "id": 10303
             },
             {
               "name": "Flexbox",
               "done": false,
-              "outcome": "Align and distribute items in one direction."
+              "outcome": "Align and distribute items in one direction.",
+              "id": 10304
             },
             {
               "name": "Grid",
               "done": false,
-              "outcome": "Build multi-column layouts and responsive grids."
+              "outcome": "Build multi-column layouts and responsive grids.",
+              "id": 10305
             },
             {
               "name": "Positioning",
               "done": false,
-              "outcome": "Use relative, absolute, fixed, sticky, and z-index."
+              "outcome": "Use relative, absolute, fixed, sticky, and z-index.",
+              "id": 10306
             },
             {
               "name": "Overflow and sizing",
               "done": false,
-              "outcome": "Handle width, height, max/min, overflow, object-fit."
+              "outcome": "Handle width, height, max/min, overflow, object-fit.",
+              "id": 10307
             },
             {
               "name": "Responsive design",
               "done": false,
-              "outcome": "Use media queries and fluid layouts."
+              "outcome": "Use media queries and fluid layouts.",
+              "id": 10308
             },
             {
               "name": "Transitions and animations",
               "done": false,
-              "outcome": "Add subtle motion without clutter."
+              "outcome": "Add subtle motion without clutter.",
+              "id": 10309
             },
             {
               "name": "Tailwind CSS",
               "done": false,
-              "outcome": "Use utility classes for speed and consistency."
+              "outcome": "Use utility classes for speed and consistency.",
+              "id": 10310
             }
-          ]
+          ],
+          "id": 103
         },
         {
           "title": "JavaScript Core",
@@ -151,49 +177,59 @@
             {
               "name": "Variables and data types",
               "done": false,
-              "outcome": "Work with let, const, strings, numbers, booleans, null, undefined."
+              "outcome": "Work with let, const, strings, numbers, booleans, null, undefined.",
+              "id": 10401
             },
             {
               "name": "Operators and conditions",
               "done": false,
-              "outcome": "Write if/else, switch, ternary logic."
+              "outcome": "Write if/else, switch, ternary logic.",
+              "id": 10402
             },
             {
               "name": "Loops and iteration",
               "done": false,
-              "outcome": "Use for, while, for...of, forEach, map, filter, reduce."
+              "outcome": "Use for, while, for...of, forEach, map, filter, reduce.",
+              "id": 10403
             },
             {
               "name": "Functions",
               "done": false,
-              "outcome": "Write declarations, expressions, arrow functions, closures."
+              "outcome": "Write declarations, expressions, arrow functions, closures.",
+              "id": 10404
             },
             {
               "name": "Objects and arrays",
               "done": false,
-              "outcome": "Store structured data and manipulate it."
+              "outcome": "Store structured data and manipulate it.",
+              "id": 10405
             },
             {
               "name": "DOM manipulation",
               "done": false,
-              "outcome": "Read and update page elements."
+              "outcome": "Read and update page elements.",
+              "id": 10406
             },
             {
               "name": "Events",
               "done": false,
-              "outcome": "Handle clicks, input changes, submit, keypress."
+              "outcome": "Handle clicks, input changes, submit, keypress.",
+              "id": 10407
             },
             {
               "name": "Async JavaScript",
               "done": false,
-              "outcome": "Learn promises, async/await, fetch, error handling."
+              "outcome": "Learn promises, async/await, fetch, error handling.",
+              "id": 10408
             },
             {
               "name": "Modules",
               "done": false,
-              "outcome": "Understand import/export and code organization."
+              "outcome": "Understand import/export and code organization.",
+              "id": 10409
             }
-          ]
+          ],
+          "id": 104
         },
         {
           "title": "React Frontend",
@@ -201,59 +237,71 @@
             {
               "name": "JSX",
               "done": false,
-              "outcome": "Write UI in JavaScript with component syntax."
+              "outcome": "Write UI in JavaScript with component syntax.",
+              "id": 10501
             },
             {
               "name": "Components",
               "done": false,
-              "outcome": "Break UI into reusable pieces."
+              "outcome": "Break UI into reusable pieces.",
+              "id": 10502
             },
             {
               "name": "Props",
               "done": false,
-              "outcome": "Pass data top-down between components."
+              "outcome": "Pass data top-down between components.",
+              "id": 10503
             },
             {
               "name": "State",
               "done": false,
-              "outcome": "Store changing UI data with useState."
+              "outcome": "Store changing UI data with useState.",
+              "id": 10504
             },
             {
               "name": "Effects",
               "done": false,
-              "outcome": "Fetch data and sync with useEffect."
+              "outcome": "Fetch data and sync with useEffect.",
+              "id": 10505
             },
             {
               "name": "Refs",
               "done": false,
-              "outcome": "Access DOM nodes and preserve values with useRef."
+              "outcome": "Access DOM nodes and preserve values with useRef.",
+              "id": 10506
             },
             {
               "name": "Forms",
               "done": false,
-              "outcome": "Manage controlled inputs and validation."
+              "outcome": "Manage controlled inputs and validation.",
+              "id": 10507
             },
             {
               "name": "Conditional rendering",
               "done": false,
-              "outcome": "Show different UI based on state."
+              "outcome": "Show different UI based on state.",
+              "id": 10508
             },
             {
               "name": "Lists and keys",
               "done": false,
-              "outcome": "Render arrays safely and efficiently."
+              "outcome": "Render arrays safely and efficiently.",
+              "id": 10509
             },
             {
               "name": "Routing",
               "done": false,
-              "outcome": "Build multi-page apps with React Router."
+              "outcome": "Build multi-page apps with React Router.",
+              "id": 10510
             },
             {
               "name": "State sharing",
               "done": false,
-              "outcome": "Use lifting state, context, and custom hooks."
+              "outcome": "Use lifting state, context, and custom hooks.",
+              "id": 10511
             }
-          ]
+          ],
+          "id": 105
         },
         {
           "title": "Backend and APIs",
@@ -261,54 +309,65 @@
             {
               "name": "Node.js runtime",
               "done": false,
-              "outcome": "Run JavaScript on the server."
+              "outcome": "Run JavaScript on the server.",
+              "id": 10601
             },
             {
               "name": "Express basics",
               "done": false,
-              "outcome": "Create routes, middleware, and APIs."
+              "outcome": "Create routes, middleware, and APIs.",
+              "id": 10602
             },
             {
               "name": "REST design",
               "done": false,
-              "outcome": "Structure endpoints with HTTP methods."
+              "outcome": "Structure endpoints with HTTP methods.",
+              "id": 10603
             },
             {
               "name": "CRUD operations",
               "done": false,
-              "outcome": "Create, read, update, delete data."
+              "outcome": "Create, read, update, delete data.",
+              "id": 10604
             },
             {
               "name": "Validation",
               "done": false,
-              "outcome": "Validate request bodies and parameters."
+              "outcome": "Validate request bodies and parameters.",
+              "id": 10605
             },
             {
               "name": "Authentication",
               "done": false,
-              "outcome": "Use sessions or JWTs for login."
+              "outcome": "Use sessions or JWTs for login.",
+              "id": 10606
             },
             {
               "name": "Authorization",
               "done": false,
-              "outcome": "Restrict data and routes by role."
+              "outcome": "Restrict data and routes by role.",
+              "id": 10607
             },
             {
               "name": "Error handling",
               "done": false,
-              "outcome": "Return proper status codes and messages."
+              "outcome": "Return proper status codes and messages.",
+              "id": 10608
             },
             {
               "name": "File uploads",
               "done": false,
-              "outcome": "Handle images and documents."
+              "outcome": "Handle images and documents.",
+              "id": 10609
             },
             {
               "name": "Security basics",
               "done": false,
-              "outcome": "Understand CORS, rate limiting, sanitization."
+              "outcome": "Understand CORS, rate limiting, sanitization.",
+              "id": 10610
             }
-          ]
+          ],
+          "id": 106
         },
         {
           "title": "Database and Deployment",
@@ -316,44 +375,53 @@
             {
               "name": "SQL fundamentals",
               "done": false,
-              "outcome": "Create and query relational tables."
+              "outcome": "Create and query relational tables.",
+              "id": 10701
             },
             {
               "name": "Relational modeling",
               "done": false,
-              "outcome": "Use keys, relationships, and constraints."
+              "outcome": "Use keys, relationships, and constraints.",
+              "id": 10702
             },
             {
               "name": "MongoDB basics",
               "done": false,
-              "outcome": "Work with documents and collections."
+              "outcome": "Work with documents and collections.",
+              "id": 10703
             },
             {
               "name": "Environment variables",
               "done": false,
-              "outcome": "Keep secrets out of source code."
+              "outcome": "Keep secrets out of source code.",
+              "id": 10704
             },
             {
               "name": "Deployment workflow",
               "done": false,
-              "outcome": "Ship frontend and backend to production."
+              "outcome": "Ship frontend and backend to production.",
+              "id": 10705
             },
             {
               "name": "Logging and debugging",
               "done": false,
-              "outcome": "Trace issues in deployed apps."
+              "outcome": "Trace issues in deployed apps.",
+              "id": 10706
             },
             {
               "name": "Performance basics",
               "done": false,
-              "outcome": "Reduce bundle size and improve load times."
+              "outcome": "Reduce bundle size and improve load times.",
+              "id": 10707
             },
             {
               "name": "Project polishing",
               "done": false,
-              "outcome": "Add loading states, empty states, and toasts."
+              "outcome": "Add loading states, empty states, and toasts.",
+              "id": 10708
             }
-          ]
+          ],
+          "id": 107
         },
         {
           "title": "Project Ideas",
@@ -365,7 +433,8 @@
               "projects": [
                 "Smart Todo",
                 "Study Todo"
-              ]
+              ],
+              "id": 10801
             },
             {
               "name": "Expense tracker",
@@ -374,24 +443,29 @@
               "projects": [
                 "Student Finance",
                 "Budget Tracker"
-              ]
+              ],
+              "id": 10802
             },
             {
               "name": "Student hub",
               "done": false,
-              "outcome": "Combine todo, calculator, notes, and roadmap pages."
+              "outcome": "Combine todo, calculator, notes, and roadmap pages.",
+              "id": 10803
             },
             {
               "name": "Auth dashboard",
               "done": false,
-              "outcome": "Login, signup, protected pages, profile management."
+              "outcome": "Login, signup, protected pages, profile management.",
+              "id": 10804
             },
             {
               "name": "Mini e-commerce",
               "done": false,
-              "outcome": "Products, cart, wishlist, checkout UI."
+              "outcome": "Products, cart, wishlist, checkout UI.",
+              "id": 10805
             }
-          ]
+          ],
+          "id": 108
         }
       ]
     },
@@ -415,29 +489,35 @@
             {
               "name": "Time complexity",
               "done": false,
-              "outcome": "Analyze runtime with Big-O."
+              "outcome": "Analyze runtime with Big-O.",
+              "id": 20101
             },
             {
               "name": "Space complexity",
               "done": false,
-              "outcome": "Track auxiliary memory use."
+              "outcome": "Track auxiliary memory use.",
+              "id": 20102
             },
             {
               "name": "Recursion",
               "done": false,
-              "outcome": "Understand base case, recursive case, stack frames."
+              "outcome": "Understand base case, recursive case, stack frames.",
+              "id": 20103
             },
             {
               "name": "Backtracking idea",
               "done": false,
-              "outcome": "Try, recurse, undo."
+              "outcome": "Try, recurse, undo.",
+              "id": 20104
             },
             {
               "name": "Bit manipulation basics",
               "done": false,
-              "outcome": "Use AND, OR, XOR, shifts."
+              "outcome": "Use AND, OR, XOR, shifts.",
+              "id": 20105
             }
-          ]
+          ],
+          "id": 201
         },
         {
           "title": "Arrays and Strings",
@@ -445,44 +525,53 @@
             {
               "name": "Traversal",
               "done": false,
-              "outcome": "Scan arrays safely and efficiently."
+              "outcome": "Scan arrays safely and efficiently.",
+              "id": 20201
             },
             {
               "name": "Reversal",
               "done": false,
-              "outcome": "Reverse in-place using two pointers."
+              "outcome": "Reverse in-place using two pointers.",
+              "id": 20202
             },
             {
               "name": "Prefix sums",
               "done": false,
-              "outcome": "Answer range-sum queries quickly."
+              "outcome": "Answer range-sum queries quickly.",
+              "id": 20203
             },
             {
               "name": "Two pointers",
               "done": false,
-              "outcome": "Solve pair and partition problems."
+              "outcome": "Solve pair and partition problems.",
+              "id": 20204
             },
             {
               "name": "Sliding window",
               "done": false,
-              "outcome": "Handle fixed and variable windows."
+              "outcome": "Handle fixed and variable windows.",
+              "id": 20205
             },
             {
               "name": "Hashing",
               "done": false,
-              "outcome": "Use frequency maps and sets."
+              "outcome": "Use frequency maps and sets.",
+              "id": 20206
             },
             {
               "name": "String matching basics",
               "done": false,
-              "outcome": "Compare patterns and substrings."
+              "outcome": "Compare patterns and substrings.",
+              "id": 20207
             },
             {
               "name": "Kadane's algorithm",
               "done": false,
-              "outcome": "Find maximum subarray sum."
+              "outcome": "Find maximum subarray sum.",
+              "id": 20208
             }
-          ]
+          ],
+          "id": 202
         },
         {
           "title": "Searching and Sorting",
@@ -490,34 +579,41 @@
             {
               "name": "Binary search",
               "done": false,
-              "outcome": "Search sorted spaces and answer spaces."
+              "outcome": "Search sorted spaces and answer spaces.",
+              "id": 20301
             },
             {
               "name": "Lower and upper bound",
               "done": false,
-              "outcome": "Find boundary positions."
+              "outcome": "Find boundary positions.",
+              "id": 20302
             },
             {
               "name": "Selection techniques",
               "done": false,
-              "outcome": "Kth smallest/largest styles."
+              "outcome": "Kth smallest/largest styles.",
+              "id": 20303
             },
             {
               "name": "Merge sort",
               "done": false,
-              "outcome": "Divide and conquer sorting."
+              "outcome": "Divide and conquer sorting.",
+              "id": 20304
             },
             {
               "name": "Quick sort",
               "done": false,
-              "outcome": "Partition-based sorting."
+              "outcome": "Partition-based sorting.",
+              "id": 20305
             },
             {
               "name": "Counting sort",
               "done": false,
-              "outcome": "Use when value range is limited."
+              "outcome": "Use when value range is limited.",
+              "id": 20306
             }
-          ]
+          ],
+          "id": 203
         },
         {
           "title": "Linked List",
@@ -525,34 +621,41 @@
             {
               "name": "Singly linked list",
               "done": false,
-              "outcome": "Insert, delete, traverse."
+              "outcome": "Insert, delete, traverse.",
+              "id": 20401
             },
             {
               "name": "Doubly linked list",
               "done": false,
-              "outcome": "Move in both directions."
+              "outcome": "Move in both directions.",
+              "id": 20402
             },
             {
               "name": "Fast and slow pointers",
               "done": false,
-              "outcome": "Detect cycles and middle node."
+              "outcome": "Detect cycles and middle node.",
+              "id": 20403
             },
             {
               "name": "Reverse list",
               "done": false,
-              "outcome": "Reverse iteratively and recursively."
+              "outcome": "Reverse iteratively and recursively.",
+              "id": 20404
             },
             {
               "name": "Merge lists",
               "done": false,
-              "outcome": "Combine two sorted lists."
+              "outcome": "Combine two sorted lists.",
+              "id": 20405
             },
             {
               "name": "Cycle detection",
               "done": false,
-              "outcome": "Use Floyd's algorithm."
+              "outcome": "Use Floyd's algorithm.",
+              "id": 20406
             }
-          ]
+          ],
+          "id": 204
         },
         {
           "title": "Stack, Queue, Heap",
@@ -560,34 +663,41 @@
             {
               "name": "Stack basics",
               "done": false,
-              "outcome": "Use LIFO for nested problems."
+              "outcome": "Use LIFO for nested problems.",
+              "id": 20501
             },
             {
               "name": "Queue basics",
               "done": false,
-              "outcome": "Use FIFO for level-order and buffering."
+              "outcome": "Use FIFO for level-order and buffering.",
+              "id": 20502
             },
             {
               "name": "Deque",
               "done": false,
-              "outcome": "Support insertion/removal at both ends."
+              "outcome": "Support insertion/removal at both ends.",
+              "id": 20503
             },
             {
               "name": "Monotonic stack",
               "done": false,
-              "outcome": "Solve next greater/smaller problems."
+              "outcome": "Solve next greater/smaller problems.",
+              "id": 20504
             },
             {
               "name": "Priority queue",
               "done": false,
-              "outcome": "Pick min/max efficiently."
+              "outcome": "Pick min/max efficiently.",
+              "id": 20505
             },
             {
               "name": "Heap applications",
               "done": false,
-              "outcome": "Top-K, scheduling, merging."
+              "outcome": "Top-K, scheduling, merging.",
+              "id": 20506
             }
-          ]
+          ],
+          "id": 205
         },
         {
           "title": "Trees",
@@ -595,34 +705,41 @@
             {
               "name": "Tree terminology",
               "done": false,
-              "outcome": "Learn root, child, leaf, depth, height."
+              "outcome": "Learn root, child, leaf, depth, height.",
+              "id": 20601
             },
             {
               "name": "Traversals",
               "done": false,
-              "outcome": "Do preorder, inorder, postorder, level order."
+              "outcome": "Do preorder, inorder, postorder, level order.",
+              "id": 20602
             },
             {
               "name": "Binary search tree",
               "done": false,
-              "outcome": "Use ordered tree properties."
+              "outcome": "Use ordered tree properties.",
+              "id": 20603
             },
             {
               "name": "Diameter and height",
               "done": false,
-              "outcome": "Combine subtree results."
+              "outcome": "Combine subtree results.",
+              "id": 20604
             },
             {
               "name": "Lowest common ancestor",
               "done": false,
-              "outcome": "Compare ancestors efficiently."
+              "outcome": "Compare ancestors efficiently.",
+              "id": 20605
             },
             {
               "name": "Tree views",
               "done": false,
-              "outcome": "Top, bottom, left, right views."
+              "outcome": "Top, bottom, left, right views.",
+              "id": 20606
             }
-          ]
+          ],
+          "id": 206
         },
         {
           "title": "Graphs",
@@ -630,44 +747,53 @@
             {
               "name": "Graph representation",
               "done": false,
-              "outcome": "Use adjacency list and matrix."
+              "outcome": "Use adjacency list and matrix.",
+              "id": 20701
             },
             {
               "name": "DFS",
               "done": false,
-              "outcome": "Explore deep recursively or iteratively."
+              "outcome": "Explore deep recursively or iteratively.",
+              "id": 20702
             },
             {
               "name": "BFS",
               "done": false,
-              "outcome": "Explore level by level."
+              "outcome": "Explore level by level.",
+              "id": 20703
             },
             {
               "name": "Cycle detection",
               "done": false,
-              "outcome": "Detect loops in directed and undirected graphs."
+              "outcome": "Detect loops in directed and undirected graphs.",
+              "id": 20704
             },
             {
               "name": "Topological sort",
               "done": false,
-              "outcome": "Order nodes with dependencies."
+              "outcome": "Order nodes with dependencies.",
+              "id": 20705
             },
             {
               "name": "Shortest path",
               "done": false,
-              "outcome": "Understand BFS, Dijkstra, Bellman-Ford."
+              "outcome": "Understand BFS, Dijkstra, Bellman-Ford.",
+              "id": 20706
             },
             {
               "name": "MST",
               "done": false,
-              "outcome": "Learn Prim's and Kruskal's algorithms."
+              "outcome": "Learn Prim's and Kruskal's algorithms.",
+              "id": 20707
             },
             {
               "name": "Union-Find",
               "done": false,
-              "outcome": "Maintain connected components."
+              "outcome": "Maintain connected components.",
+              "id": 20708
             }
-          ]
+          ],
+          "id": 207
         },
         {
           "title": "Advanced Patterns",
@@ -675,34 +801,41 @@
             {
               "name": "Greedy",
               "done": false,
-              "outcome": "Choose locally optimal steps."
+              "outcome": "Choose locally optimal steps.",
+              "id": 20801
             },
             {
               "name": "Dynamic programming",
               "done": false,
-              "outcome": "Memoize overlapping subproblems."
+              "outcome": "Memoize overlapping subproblems.",
+              "id": 20802
             },
             {
               "name": "Trie",
               "done": false,
-              "outcome": "Store prefix-based strings."
+              "outcome": "Store prefix-based strings.",
+              "id": 20803
             },
             {
               "name": "Segment tree",
               "done": false,
-              "outcome": "Query and update ranges."
+              "outcome": "Query and update ranges.",
+              "id": 20804
             },
             {
               "name": "Binary indexed tree",
               "done": false,
-              "outcome": "Fast prefix updates and sums."
+              "outcome": "Fast prefix updates and sums.",
+              "id": 20805
             },
             {
               "name": "Sliding window on strings",
               "done": false,
-              "outcome": "Work with counts and valid windows."
+              "outcome": "Work with counts and valid windows.",
+              "id": 20806
             }
-          ]
+          ],
+          "id": 208
         },
         {
           "title": "Practice Workflow",
@@ -710,29 +843,35 @@
             {
               "name": "Pattern recognition",
               "done": false,
-              "outcome": "Identify the underlying pattern first."
+              "outcome": "Identify the underlying pattern first.",
+              "id": 20901
             },
             {
               "name": "Bruteforce then optimize",
               "done": false,
-              "outcome": "Start simple, then improve."
+              "outcome": "Start simple, then improve.",
+              "id": 20902
             },
             {
               "name": "Debugging discipline",
               "done": false,
-              "outcome": "Trace inputs, states, and edge cases."
+              "outcome": "Trace inputs, states, and edge cases.",
+              "id": 20903
             },
             {
               "name": "Rewrites",
               "done": false,
-              "outcome": "Solve again without watching the solution."
+              "outcome": "Solve again without watching the solution.",
+              "id": 20904
             },
             {
               "name": "Revision schedule",
               "done": false,
-              "outcome": "Revisit old problems weekly."
+              "outcome": "Revisit old problems weekly.",
+              "id": 20905
             }
-          ]
+          ],
+          "id": 209
         }
       ]
     },
@@ -755,24 +894,29 @@
             {
               "name": "What is an OS",
               "done": false,
-              "outcome": "Understand OS responsibilities."
+              "outcome": "Understand OS responsibilities.",
+              "id": 30101
             },
             {
               "name": "Types of OS",
               "done": false,
-              "outcome": "Batch, multiprogramming, time-sharing, distributed."
+              "outcome": "Batch, multiprogramming, time-sharing, distributed.",
+              "id": 30102
             },
             {
               "name": "Kernel and shell",
               "done": false,
-              "outcome": "Know the core and the interface."
+              "outcome": "Know the core and the interface.",
+              "id": 30103
             },
             {
               "name": "System calls",
               "done": false,
-              "outcome": "Bridge user programs and kernel services."
+              "outcome": "Bridge user programs and kernel services.",
+              "id": 30104
             }
-          ]
+          ],
+          "id": 301
         },
         {
           "title": "Process Management",
@@ -780,49 +924,59 @@
             {
               "name": "Process vs thread",
               "done": false,
-              "outcome": "Compare memory and execution models."
+              "outcome": "Compare memory and execution models.",
+              "id": 30201
             },
             {
               "name": "Process states",
               "done": false,
-              "outcome": "New, ready, running, waiting, terminated."
+              "outcome": "New, ready, running, waiting, terminated.",
+              "id": 30202
             },
             {
               "name": "PCB",
               "done": false,
-              "outcome": "Store process metadata."
+              "outcome": "Store process metadata.",
+              "id": 30203
             },
             {
               "name": "Context switching",
               "done": false,
-              "outcome": "Save and restore CPU state."
+              "outcome": "Save and restore CPU state.",
+              "id": 30204
             },
             {
               "name": "CPU scheduling",
               "done": false,
-              "outcome": "Choose which process runs next."
+              "outcome": "Choose which process runs next.",
+              "id": 30205
             },
             {
               "name": "FCFS",
               "done": false,
-              "outcome": "First come first served."
+              "outcome": "First come first served.",
+              "id": 30206
             },
             {
               "name": "SJF",
               "done": false,
-              "outcome": "Shortest job first."
+              "outcome": "Shortest job first.",
+              "id": 30207
             },
             {
               "name": "Round Robin",
               "done": false,
-              "outcome": "Time slicing scheduling."
+              "outcome": "Time slicing scheduling.",
+              "id": 30208
             },
             {
               "name": "Priority scheduling",
               "done": false,
-              "outcome": "Order by priority."
+              "outcome": "Order by priority.",
+              "id": 30209
             }
-          ]
+          ],
+          "id": 302
         },
         {
           "title": "Synchronization",
@@ -830,39 +984,47 @@
             {
               "name": "Critical section",
               "done": false,
-              "outcome": "Protect shared resources."
+              "outcome": "Protect shared resources.",
+              "id": 30301
             },
             {
               "name": "Race condition",
               "done": false,
-              "outcome": "Understand nondeterministic failures."
+              "outcome": "Understand nondeterministic failures.",
+              "id": 30302
             },
             {
               "name": "Mutex",
               "done": false,
-              "outcome": "Mutual exclusion lock."
+              "outcome": "Mutual exclusion lock.",
+              "id": 30303
             },
             {
               "name": "Semaphore",
               "done": false,
-              "outcome": "Coordinate access with counters."
+              "outcome": "Coordinate access with counters.",
+              "id": 30304
             },
             {
               "name": "Deadlock",
               "done": false,
-              "outcome": "Identify circular wait situations."
+              "outcome": "Identify circular wait situations.",
+              "id": 30305
             },
             {
               "name": "Deadlock prevention",
               "done": false,
-              "outcome": "Break one of the necessary conditions."
+              "outcome": "Break one of the necessary conditions.",
+              "id": 30306
             },
             {
               "name": "Deadlock avoidance",
               "done": false,
-              "outcome": "Use safe state reasoning."
+              "outcome": "Use safe state reasoning.",
+              "id": 30307
             }
-          ]
+          ],
+          "id": 303
         },
         {
           "title": "Memory Management",
@@ -870,44 +1032,53 @@
             {
               "name": "Contiguous allocation",
               "done": false,
-              "outcome": "Store processes in continuous memory."
+              "outcome": "Store processes in continuous memory.",
+              "id": 30401
             },
             {
               "name": "Paging",
               "done": false,
-              "outcome": "Use page tables and frames."
+              "outcome": "Use page tables and frames.",
+              "id": 30402
             },
             {
               "name": "Segmentation",
               "done": false,
-              "outcome": "Divide memory into logical segments."
+              "outcome": "Divide memory into logical segments.",
+              "id": 30403
             },
             {
               "name": "Virtual memory",
               "done": false,
-              "outcome": "Use disk as memory extension."
+              "outcome": "Use disk as memory extension.",
+              "id": 30404
             },
             {
               "name": "Page replacement",
               "done": false,
-              "outcome": "Pick a page to evict."
+              "outcome": "Pick a page to evict.",
+              "id": 30405
             },
             {
               "name": "FIFO replacement",
               "done": false,
-              "outcome": "Oldest page gets replaced."
+              "outcome": "Oldest page gets replaced.",
+              "id": 30406
             },
             {
               "name": "LRU replacement",
               "done": false,
-              "outcome": "Least recently used page gets replaced."
+              "outcome": "Least recently used page gets replaced.",
+              "id": 30407
             },
             {
               "name": "Optimal replacement",
               "done": false,
-              "outcome": "Theoretical best replacement."
+              "outcome": "Theoretical best replacement.",
+              "id": 30408
             }
-          ]
+          ],
+          "id": 304
         },
         {
           "title": "File Systems and Storage",
@@ -915,29 +1086,35 @@
             {
               "name": "Files and directories",
               "done": false,
-              "outcome": "Organize data on disk."
+              "outcome": "Organize data on disk.",
+              "id": 30501
             },
             {
               "name": "File allocation methods",
               "done": false,
-              "outcome": "Contiguous, linked, indexed."
+              "outcome": "Contiguous, linked, indexed.",
+              "id": 30502
             },
             {
               "name": "Disk scheduling",
               "done": false,
-              "outcome": "Optimize head movement."
+              "outcome": "Optimize head movement.",
+              "id": 30503
             },
             {
               "name": "Buffering and caching",
               "done": false,
-              "outcome": "Improve I/O performance."
+              "outcome": "Improve I/O performance.",
+              "id": 30504
             },
             {
               "name": "Protection and security",
               "done": false,
-              "outcome": "Manage access rights."
+              "outcome": "Manage access rights.",
+              "id": 30505
             }
-          ]
+          ],
+          "id": 305
         }
       ]
     },
@@ -960,29 +1137,35 @@
             {
               "name": "Binary, octal, decimal, hex",
               "done": false,
-              "outcome": "Convert between common number systems."
+              "outcome": "Convert between common number systems.",
+              "id": 40101
             },
             {
               "name": "Binary arithmetic",
               "done": false,
-              "outcome": "Add, subtract, and represent signed numbers."
+              "outcome": "Add, subtract, and represent signed numbers.",
+              "id": 40102
             },
             {
               "name": "Logic gates",
               "done": false,
-              "outcome": "Use AND, OR, NOT, XOR, NAND, NOR."
+              "outcome": "Use AND, OR, NOT, XOR, NAND, NOR.",
+              "id": 40103
             },
             {
               "name": "Boolean algebra",
               "done": false,
-              "outcome": "Simplify expressions."
+              "outcome": "Simplify expressions.",
+              "id": 40104
             },
             {
               "name": "K-map",
               "done": false,
-              "outcome": "Minimize logic expressions."
+              "outcome": "Minimize logic expressions.",
+              "id": 40105
             }
-          ]
+          ],
+          "id": 401
         },
         {
           "title": "Combinational Circuits",
@@ -990,34 +1173,41 @@
             {
               "name": "Half adder",
               "done": false,
-              "outcome": "Add two bits."
+              "outcome": "Add two bits.",
+              "id": 40201
             },
             {
               "name": "Full adder",
               "done": false,
-              "outcome": "Add bits with carry."
+              "outcome": "Add bits with carry.",
+              "id": 40202
             },
             {
               "name": "Multiplexer",
               "done": false,
-              "outcome": "Select one input from many."
+              "outcome": "Select one input from many.",
+              "id": 40203
             },
             {
               "name": "Demultiplexer",
               "done": false,
-              "outcome": "Send one input to many outputs."
+              "outcome": "Send one input to many outputs.",
+              "id": 40204
             },
             {
               "name": "Encoder and decoder",
               "done": false,
-              "outcome": "Convert between encoded forms."
+              "outcome": "Convert between encoded forms.",
+              "id": 40205
             },
             {
               "name": "Comparator",
               "done": false,
-              "outcome": "Compare two binary numbers."
+              "outcome": "Compare two binary numbers.",
+              "id": 40206
             }
-          ]
+          ],
+          "id": 402
         },
         {
           "title": "Processor Organization",
@@ -1025,29 +1215,35 @@
             {
               "name": "CPU components",
               "done": false,
-              "outcome": "Understand control unit, ALU, registers."
+              "outcome": "Understand control unit, ALU, registers.",
+              "id": 40301
             },
             {
               "name": "Registers",
               "done": false,
-              "outcome": "Store immediate data inside CPU."
+              "outcome": "Store immediate data inside CPU.",
+              "id": 40302
             },
             {
               "name": "Instruction cycle",
               "done": false,
-              "outcome": "Fetch, decode, execute."
+              "outcome": "Fetch, decode, execute.",
+              "id": 40303
             },
             {
               "name": "Instruction formats",
               "done": false,
-              "outcome": "Understand operand layout."
+              "outcome": "Understand operand layout.",
+              "id": 40304
             },
             {
               "name": "Addressing modes",
               "done": false,
-              "outcome": "Immediate, direct, indirect, register, etc."
+              "outcome": "Immediate, direct, indirect, register, etc.",
+              "id": 40305
             }
-          ]
+          ],
+          "id": 403
         },
         {
           "title": "Memory Hierarchy",
@@ -1055,24 +1251,29 @@
             {
               "name": "RAM and ROM",
               "done": false,
-              "outcome": "Differentiate volatile and non-volatile memory."
+              "outcome": "Differentiate volatile and non-volatile memory.",
+              "id": 40401
             },
             {
               "name": "Cache memory",
               "done": false,
-              "outcome": "Store frequently used data close to CPU."
+              "outcome": "Store frequently used data close to CPU.",
+              "id": 40402
             },
             {
               "name": "Cache mapping",
               "done": false,
-              "outcome": "Direct, associative, set associative."
+              "outcome": "Direct, associative, set associative.",
+              "id": 40403
             },
             {
               "name": "Memory hierarchy",
               "done": false,
-              "outcome": "L1, L2, L3, RAM, secondary storage."
+              "outcome": "L1, L2, L3, RAM, secondary storage.",
+              "id": 40404
             }
-          ]
+          ],
+          "id": 404
         },
         {
           "title": "Performance and Pipelining",
@@ -1080,29 +1281,35 @@
             {
               "name": "Pipelining",
               "done": false,
-              "outcome": "Overlap instruction stages."
+              "outcome": "Overlap instruction stages.",
+              "id": 40501
             },
             {
               "name": "Hazards",
               "done": false,
-              "outcome": "Structural, data, control hazards."
+              "outcome": "Structural, data, control hazards.",
+              "id": 40502
             },
             {
               "name": "Throughput",
               "done": false,
-              "outcome": "Measure completed work per unit time."
+              "outcome": "Measure completed work per unit time.",
+              "id": 40503
             },
             {
               "name": "CPI",
               "done": false,
-              "outcome": "Cycles per instruction."
+              "outcome": "Cycles per instruction.",
+              "id": 40504
             },
             {
               "name": "Speedup",
               "done": false,
-              "outcome": "Compare optimized and baseline systems."
+              "outcome": "Compare optimized and baseline systems.",
+              "id": 40505
             }
-          ]
+          ],
+          "id": 405
         }
       ]
     },
@@ -1125,29 +1332,35 @@
             {
               "name": "DBMS overview",
               "done": false,
-              "outcome": "Understand why databases exist."
+              "outcome": "Understand why databases exist.",
+              "id": 50101
             },
             {
               "name": "File system vs DBMS",
               "done": false,
-              "outcome": "See the limitations of raw file handling."
+              "outcome": "See the limitations of raw file handling.",
+              "id": 50102
             },
             {
               "name": "Data abstraction",
               "done": false,
-              "outcome": "Physical, logical, and view levels."
+              "outcome": "Physical, logical, and view levels.",
+              "id": 50103
             },
             {
               "name": "ER model",
               "done": false,
-              "outcome": "Represent entities and relationships."
+              "outcome": "Represent entities and relationships.",
+              "id": 50104
             },
             {
               "name": "Relationships",
               "done": false,
-              "outcome": "One-to-one, one-to-many, many-to-many."
+              "outcome": "One-to-one, one-to-many, many-to-many.",
+              "id": 50105
             }
-          ]
+          ],
+          "id": 501
         },
         {
           "title": "Relational Model",
@@ -1155,24 +1368,29 @@
             {
               "name": "Tables, rows, columns",
               "done": false,
-              "outcome": "Understand relational structure."
+              "outcome": "Understand relational structure.",
+              "id": 50201
             },
             {
               "name": "Keys",
               "done": false,
-              "outcome": "Primary, candidate, foreign, composite keys."
+              "outcome": "Primary, candidate, foreign, composite keys.",
+              "id": 50202
             },
             {
               "name": "Constraints",
               "done": false,
-              "outcome": "NOT NULL, UNIQUE, CHECK, DEFAULT."
+              "outcome": "NOT NULL, UNIQUE, CHECK, DEFAULT.",
+              "id": 50203
             },
             {
               "name": "Relational algebra basics",
               "done": false,
-              "outcome": "Learn selection, projection, join."
+              "outcome": "Learn selection, projection, join.",
+              "id": 50204
             }
-          ]
+          ],
+          "id": 502
         },
         {
           "title": "Normalization",
@@ -1180,34 +1398,41 @@
             {
               "name": "Functional dependency",
               "done": false,
-              "outcome": "Understand dependency rules."
+              "outcome": "Understand dependency rules.",
+              "id": 50301
             },
             {
               "name": "1NF",
               "done": false,
-              "outcome": "Remove repeating groups."
+              "outcome": "Remove repeating groups.",
+              "id": 50302
             },
             {
               "name": "2NF",
               "done": false,
-              "outcome": "Remove partial dependency."
+              "outcome": "Remove partial dependency.",
+              "id": 50303
             },
             {
               "name": "3NF",
               "done": false,
-              "outcome": "Remove transitive dependency."
+              "outcome": "Remove transitive dependency.",
+              "id": 50304
             },
             {
               "name": "BCNF",
               "done": false,
-              "outcome": "Tighter normalization rule."
+              "outcome": "Tighter normalization rule.",
+              "id": 50305
             },
             {
               "name": "Decomposition",
               "done": false,
-              "outcome": "Split tables without losing information."
+              "outcome": "Split tables without losing information.",
+              "id": 50306
             }
-          ]
+          ],
+          "id": 503
         },
         {
           "title": "SQL Basics",
@@ -1215,29 +1440,35 @@
             {
               "name": "CREATE and ALTER",
               "done": false,
-              "outcome": "Define and change tables."
+              "outcome": "Define and change tables.",
+              "id": 50401
             },
             {
               "name": "INSERT, UPDATE, DELETE",
               "done": false,
-              "outcome": "Modify records."
+              "outcome": "Modify records.",
+              "id": 50402
             },
             {
               "name": "SELECT and WHERE",
               "done": false,
-              "outcome": "Retrieve specific rows."
+              "outcome": "Retrieve specific rows.",
+              "id": 50403
             },
             {
               "name": "ORDER BY and DISTINCT",
               "done": false,
-              "outcome": "Sort and deduplicate results."
+              "outcome": "Sort and deduplicate results.",
+              "id": 50404
             },
             {
               "name": "Aggregate functions",
               "done": false,
-              "outcome": "Use COUNT, SUM, AVG, MIN, MAX."
+              "outcome": "Use COUNT, SUM, AVG, MIN, MAX.",
+              "id": 50405
             }
-          ]
+          ],
+          "id": 504
         },
         {
           "title": "SQL Joins and Queries",
@@ -1245,49 +1476,59 @@
             {
               "name": "INNER JOIN",
               "done": false,
-              "outcome": "Match rows from both tables."
+              "outcome": "Match rows from both tables.",
+              "id": 50501
             },
             {
               "name": "LEFT JOIN",
               "done": false,
-              "outcome": "Keep all left rows."
+              "outcome": "Keep all left rows.",
+              "id": 50502
             },
             {
               "name": "RIGHT JOIN",
               "done": false,
-              "outcome": "Keep all right rows."
+              "outcome": "Keep all right rows.",
+              "id": 50503
             },
             {
               "name": "GROUP BY",
               "done": false,
-              "outcome": "Aggregate by category."
+              "outcome": "Aggregate by category.",
+              "id": 50504
             },
             {
               "name": "HAVING",
               "done": false,
-              "outcome": "Filter grouped results."
+              "outcome": "Filter grouped results.",
+              "id": 50505
             },
             {
               "name": "Subqueries",
               "done": false,
-              "outcome": "Nest one query inside another."
+              "outcome": "Nest one query inside another.",
+              "id": 50506
             },
             {
               "name": "Views",
               "done": false,
-              "outcome": "Create virtual tables."
+              "outcome": "Create virtual tables.",
+              "id": 50507
             },
             {
               "name": "Indexes",
               "done": false,
-              "outcome": "Speed up reads."
+              "outcome": "Speed up reads.",
+              "id": 50508
             },
             {
               "name": "Transactions",
               "done": false,
-              "outcome": "Use COMMIT and ROLLBACK."
+              "outcome": "Use COMMIT and ROLLBACK.",
+              "id": 50509
             }
-          ]
+          ],
+          "id": 505
         }
       ]
     },
@@ -1310,24 +1551,29 @@
             {
               "name": "What is a network",
               "done": false,
-              "outcome": "Understand connected devices and resource sharing."
+              "outcome": "Understand connected devices and resource sharing.",
+              "id": 60101
             },
             {
               "name": "LAN, MAN, WAN",
               "done": false,
-              "outcome": "Classify networks by scope."
+              "outcome": "Classify networks by scope.",
+              "id": 60102
             },
             {
               "name": "Network devices",
               "done": false,
-              "outcome": "Hub, switch, router, modem, access point."
+              "outcome": "Hub, switch, router, modem, access point.",
+              "id": 60103
             },
             {
               "name": "Bandwidth and latency",
               "done": false,
-              "outcome": "Measure speed and delay."
+              "outcome": "Measure speed and delay.",
+              "id": 60104
             }
-          ]
+          ],
+          "id": 601
         },
         {
           "title": "Models",
@@ -1335,24 +1581,29 @@
             {
               "name": "OSI model",
               "done": false,
-              "outcome": "Seven-layer conceptual model."
+              "outcome": "Seven-layer conceptual model.",
+              "id": 60201
             },
             {
               "name": "TCP/IP model",
               "done": false,
-              "outcome": "Practical internet stack."
+              "outcome": "Practical internet stack.",
+              "id": 60202
             },
             {
               "name": "Encapsulation",
               "done": false,
-              "outcome": "Headers and payload wrapping."
+              "outcome": "Headers and payload wrapping.",
+              "id": 60203
             },
             {
               "name": "Layer responsibilities",
               "done": false,
-              "outcome": "Know what each layer does."
+              "outcome": "Know what each layer does.",
+              "id": 60204
             }
-          ]
+          ],
+          "id": 602
         },
         {
           "title": "Protocols",
@@ -1360,29 +1611,35 @@
             {
               "name": "HTTP and HTTPS",
               "done": false,
-              "outcome": "Web communication protocols."
+              "outcome": "Web communication protocols.",
+              "id": 60301
             },
             {
               "name": "DNS",
               "done": false,
-              "outcome": "Translate names to IP addresses."
+              "outcome": "Translate names to IP addresses.",
+              "id": 60302
             },
             {
               "name": "TCP",
               "done": false,
-              "outcome": "Reliable connection-oriented transport."
+              "outcome": "Reliable connection-oriented transport.",
+              "id": 60303
             },
             {
               "name": "UDP",
               "done": false,
-              "outcome": "Fast connectionless transport."
+              "outcome": "Fast connectionless transport.",
+              "id": 60304
             },
             {
               "name": "FTP, SMTP, DHCP",
               "done": false,
-              "outcome": "Common application protocols."
+              "outcome": "Common application protocols.",
+              "id": 60305
             }
-          ]
+          ],
+          "id": 603
         },
         {
           "title": "Addressing and Routing",
@@ -1390,34 +1647,41 @@
             {
               "name": "IP addressing",
               "done": false,
-              "outcome": "Understand IPv4 and IPv6."
+              "outcome": "Understand IPv4 and IPv6.",
+              "id": 60401
             },
             {
               "name": "Subnetting",
               "done": false,
-              "outcome": "Split networks into smaller parts."
+              "outcome": "Split networks into smaller parts.",
+              "id": 60402
             },
             {
               "name": "Routing",
               "done": false,
-              "outcome": "Select paths across networks."
+              "outcome": "Select paths across networks.",
+              "id": 60403
             },
             {
               "name": "Switching",
               "done": false,
-              "outcome": "Move packets inside LANs."
+              "outcome": "Move packets inside LANs.",
+              "id": 60404
             },
             {
               "name": "NAT",
               "done": false,
-              "outcome": "Translate private and public addresses."
+              "outcome": "Translate private and public addresses.",
+              "id": 60405
             },
             {
               "name": "Ports",
               "done": false,
-              "outcome": "Identify services on a machine."
+              "outcome": "Identify services on a machine.",
+              "id": 60406
             }
-          ]
+          ],
+          "id": 604
         },
         {
           "title": "Performance and Security",
@@ -1425,29 +1689,35 @@
             {
               "name": "Error detection",
               "done": false,
-              "outcome": "Parity, checksum, CRC."
+              "outcome": "Parity, checksum, CRC.",
+              "id": 60501
             },
             {
               "name": "Flow control",
               "done": false,
-              "outcome": "Manage sender and receiver speed."
+              "outcome": "Manage sender and receiver speed.",
+              "id": 60502
             },
             {
               "name": "Congestion control",
               "done": false,
-              "outcome": "Avoid overload in networks."
+              "outcome": "Avoid overload in networks.",
+              "id": 60503
             },
             {
               "name": "Firewall basics",
               "done": false,
-              "outcome": "Block or allow traffic."
+              "outcome": "Block or allow traffic.",
+              "id": 60504
             },
             {
               "name": "Network security basics",
               "done": false,
-              "outcome": "Understand threats and protection."
+              "outcome": "Understand threats and protection.",
+              "id": 60505
             }
-          ]
+          ],
+          "id": 605
         }
       ]
     },
@@ -1471,29 +1741,35 @@
             {
               "name": "Python syntax",
               "done": false,
-              "outcome": "Write clean Python scripts."
+              "outcome": "Write clean Python scripts.",
+              "id": 70101
             },
             {
               "name": "Lists, dicts, sets",
               "done": false,
-              "outcome": "Store and transform data."
+              "outcome": "Store and transform data.",
+              "id": 70102
             },
             {
               "name": "Functions and modules",
               "done": false,
-              "outcome": "Organize reusable code."
+              "outcome": "Organize reusable code.",
+              "id": 70103
             },
             {
               "name": "File handling",
               "done": false,
-              "outcome": "Read and write datasets."
+              "outcome": "Read and write datasets.",
+              "id": 70104
             },
             {
               "name": "Virtual environments",
               "done": false,
-              "outcome": "Isolate dependencies."
+              "outcome": "Isolate dependencies.",
+              "id": 70105
             }
-          ]
+          ],
+          "id": 701
         },
         {
           "title": "Data Analysis",
@@ -1501,29 +1777,35 @@
             {
               "name": "NumPy",
               "done": false,
-              "outcome": "Use arrays and vectorized operations."
+              "outcome": "Use arrays and vectorized operations.",
+              "id": 70201
             },
             {
               "name": "Pandas",
               "done": false,
-              "outcome": "Manipulate tables and datasets."
+              "outcome": "Manipulate tables and datasets.",
+              "id": 70202
             },
             {
               "name": "Missing values",
               "done": false,
-              "outcome": "Clean and impute data."
+              "outcome": "Clean and impute data.",
+              "id": 70203
             },
             {
               "name": "Feature engineering",
               "done": false,
-              "outcome": "Create useful model inputs."
+              "outcome": "Create useful model inputs.",
+              "id": 70204
             },
             {
               "name": "Data preprocessing",
               "done": false,
-              "outcome": "Encode, scale, and transform features."
+              "outcome": "Encode, scale, and transform features.",
+              "id": 70205
             }
-          ]
+          ],
+          "id": 702
         },
         {
           "title": "Visualization",
@@ -1531,24 +1813,29 @@
             {
               "name": "Matplotlib",
               "done": false,
-              "outcome": "Create charts and plots."
+              "outcome": "Create charts and plots.",
+              "id": 70301
             },
             {
               "name": "Seaborn",
               "done": false,
-              "outcome": "Build statistical visualizations."
+              "outcome": "Build statistical visualizations.",
+              "id": 70302
             },
             {
               "name": "EDA",
               "done": false,
-              "outcome": "Explore distributions and relationships."
+              "outcome": "Explore distributions and relationships.",
+              "id": 70303
             },
             {
               "name": "Insight communication",
               "done": false,
-              "outcome": "Present findings clearly."
+              "outcome": "Present findings clearly.",
+              "id": 70304
             }
-          ]
+          ],
+          "id": 703
         },
         {
           "title": "Math and Statistics",
@@ -1556,29 +1843,35 @@
             {
               "name": "Mean, median, mode",
               "done": false,
-              "outcome": "Understand central tendency."
+              "outcome": "Understand central tendency.",
+              "id": 70401
             },
             {
               "name": "Variance and standard deviation",
               "done": false,
-              "outcome": "Measure spread."
+              "outcome": "Measure spread.",
+              "id": 70402
             },
             {
               "name": "Probability",
               "done": false,
-              "outcome": "Handle uncertainty."
+              "outcome": "Handle uncertainty.",
+              "id": 70403
             },
             {
               "name": "Linear algebra basics",
               "done": false,
-              "outcome": "Work with vectors and matrices."
+              "outcome": "Work with vectors and matrices.",
+              "id": 70404
             },
             {
               "name": "Gradient descent intuition",
               "done": false,
-              "outcome": "Understand optimization."
+              "outcome": "Understand optimization.",
+              "id": 70405
             }
-          ]
+          ],
+          "id": 704
         },
         {
           "title": "Machine Learning",
@@ -1586,49 +1879,59 @@
             {
               "name": "Supervised learning",
               "done": false,
-              "outcome": "Learn from labeled data."
+              "outcome": "Learn from labeled data.",
+              "id": 70501
             },
             {
               "name": "Unsupervised learning",
               "done": false,
-              "outcome": "Find hidden structure."
+              "outcome": "Find hidden structure.",
+              "id": 70502
             },
             {
               "name": "Regression",
               "done": false,
-              "outcome": "Predict continuous values."
+              "outcome": "Predict continuous values.",
+              "id": 70503
             },
             {
               "name": "Classification",
               "done": false,
-              "outcome": "Predict categories."
+              "outcome": "Predict categories.",
+              "id": 70504
             },
             {
               "name": "Clustering",
               "done": false,
-              "outcome": "Group similar points."
+              "outcome": "Group similar points.",
+              "id": 70505
             },
             {
               "name": "Train/validation/test split",
               "done": false,
-              "outcome": "Evaluate honestly."
+              "outcome": "Evaluate honestly.",
+              "id": 70506
             },
             {
               "name": "Overfitting and underfitting",
               "done": false,
-              "outcome": "Control model generalization."
+              "outcome": "Control model generalization.",
+              "id": 70507
             },
             {
               "name": "Model metrics",
               "done": false,
-              "outcome": "Use accuracy, precision, recall, F1, RMSE."
+              "outcome": "Use accuracy, precision, recall, F1, RMSE.",
+              "id": 70508
             },
             {
               "name": "Scikit-learn",
               "done": false,
-              "outcome": "Build models quickly."
+              "outcome": "Build models quickly.",
+              "id": 70509
             }
-          ]
+          ],
+          "id": 705
         },
         {
           "title": "Deep Learning",
@@ -1636,34 +1939,41 @@
             {
               "name": "Neural networks",
               "done": false,
-              "outcome": "Understand layers and weights."
+              "outcome": "Understand layers and weights.",
+              "id": 70601
             },
             {
               "name": "Activation functions",
               "done": false,
-              "outcome": "Add nonlinearity."
+              "outcome": "Add nonlinearity.",
+              "id": 70602
             },
             {
               "name": "Backpropagation",
               "done": false,
-              "outcome": "Train networks efficiently."
+              "outcome": "Train networks efficiently.",
+              "id": 70603
             },
             {
               "name": "CNN",
               "done": false,
-              "outcome": "Process image data."
+              "outcome": "Process image data.",
+              "id": 70604
             },
             {
               "name": "RNN and LSTM",
               "done": false,
-              "outcome": "Handle sequences."
+              "outcome": "Handle sequences.",
+              "id": 70605
             },
             {
               "name": "Transformers basics",
               "done": false,
-              "outcome": "Understand modern sequence models."
+              "outcome": "Understand modern sequence models.",
+              "id": 70606
             }
-          ]
+          ],
+          "id": 706
         },
         {
           "title": "Projects",
@@ -1671,29 +1981,35 @@
             {
               "name": "House price prediction",
               "done": false,
-              "outcome": "Regression project with preprocessing."
+              "outcome": "Regression project with preprocessing.",
+              "id": 70701
             },
             {
               "name": "Spam classifier",
               "done": false,
-              "outcome": "Text classification pipeline."
+              "outcome": "Text classification pipeline.",
+              "id": 70702
             },
             {
               "name": "Movie recommendation system",
               "done": false,
-              "outcome": "Similarity-based recommender."
+              "outcome": "Similarity-based recommender.",
+              "id": 70703
             },
             {
               "name": "Image classifier",
               "done": false,
-              "outcome": "Basic computer vision project."
+              "outcome": "Basic computer vision project.",
+              "id": 70704
             },
             {
               "name": "Chatbot prototype",
               "done": false,
-              "outcome": "Simple conversation assistant."
+              "outcome": "Simple conversation assistant.",
+              "id": 70705
             }
-          ]
+          ],
+          "id": 707
         }
       ]
     },
@@ -1717,29 +2033,35 @@
             {
               "name": "What is blockchain",
               "done": false,
-              "outcome": "Understand distributed ledgers."
+              "outcome": "Understand distributed ledgers.",
+              "id": 80101
             },
             {
               "name": "Blocks and hashes",
               "done": false,
-              "outcome": "See how data becomes tamper-resistant."
+              "outcome": "See how data becomes tamper-resistant.",
+              "id": 80102
             },
             {
               "name": "Consensus basics",
               "done": false,
-              "outcome": "Learn how networks agree on state."
+              "outcome": "Learn how networks agree on state.",
+              "id": 80103
             },
             {
               "name": "Wallets and keys",
               "done": false,
-              "outcome": "Understand public/private keys."
+              "outcome": "Understand public/private keys.",
+              "id": 80104
             },
             {
               "name": "Transactions",
               "done": false,
-              "outcome": "Move value and data on chain."
+              "outcome": "Move value and data on chain.",
+              "id": 80105
             }
-          ]
+          ],
+          "id": 801
         },
         {
           "title": "Ethereum",
@@ -1747,24 +2069,29 @@
             {
               "name": "Ethereum accounts",
               "done": false,
-              "outcome": "Externally owned and contract accounts."
+              "outcome": "Externally owned and contract accounts.",
+              "id": 80201
             },
             {
               "name": "Gas and fees",
               "done": false,
-              "outcome": "Understand execution cost."
+              "outcome": "Understand execution cost.",
+              "id": 80202
             },
             {
               "name": "Smart contracts",
               "done": false,
-              "outcome": "Programs deployed on chain."
+              "outcome": "Programs deployed on chain.",
+              "id": 80203
             },
             {
               "name": "Events",
               "done": false,
-              "outcome": "Emit readable on-chain logs."
+              "outcome": "Emit readable on-chain logs.",
+              "id": 80204
             }
-          ]
+          ],
+          "id": 802
         },
         {
           "title": "Solidity",
@@ -1772,34 +2099,41 @@
             {
               "name": "Data types",
               "done": false,
-              "outcome": "Use uint, address, bool, string, bytes."
+              "outcome": "Use uint, address, bool, string, bytes.",
+              "id": 80301
             },
             {
               "name": "Functions",
               "done": false,
-              "outcome": "Write callable contract logic."
+              "outcome": "Write callable contract logic.",
+              "id": 80302
             },
             {
               "name": "Modifiers",
               "done": false,
-              "outcome": "Reuse access and validation rules."
+              "outcome": "Reuse access and validation rules.",
+              "id": 80303
             },
             {
               "name": "Mappings",
               "done": false,
-              "outcome": "Store key-value on chain."
+              "outcome": "Store key-value on chain.",
+              "id": 80304
             },
             {
               "name": "Arrays and structs",
               "done": false,
-              "outcome": "Model data in contracts."
+              "outcome": "Model data in contracts.",
+              "id": 80305
             },
             {
               "name": "Inheritance",
               "done": false,
-              "outcome": "Build reusable contract structure."
+              "outcome": "Build reusable contract structure.",
+              "id": 80306
             }
-          ]
+          ],
+          "id": 803
         },
         {
           "title": "dApp Development",
@@ -1807,29 +2141,35 @@
             {
               "name": "Wallet connection",
               "done": false,
-              "outcome": "Connect with MetaMask or similar."
+              "outcome": "Connect with MetaMask or similar.",
+              "id": 80401
             },
             {
               "name": "Read chain data",
               "done": false,
-              "outcome": "Display blockchain state in UI."
+              "outcome": "Display blockchain state in UI.",
+              "id": 80402
             },
             {
               "name": "Write transactions",
               "done": false,
-              "outcome": "Trigger contract methods."
+              "outcome": "Trigger contract methods.",
+              "id": 80403
             },
             {
               "name": "Contract deployment",
               "done": false,
-              "outcome": "Publish and verify contracts."
+              "outcome": "Publish and verify contracts.",
+              "id": 80404
             },
             {
               "name": "Frontend integration",
               "done": false,
-              "outcome": "Use ethers.js or web3.js."
+              "outcome": "Use ethers.js or web3.js.",
+              "id": 80405
             }
-          ]
+          ],
+          "id": 804
         },
         {
           "title": "Security and Testing",
@@ -1837,29 +2177,35 @@
             {
               "name": "Access control",
               "done": false,
-              "outcome": "Restrict sensitive contract methods."
+              "outcome": "Restrict sensitive contract methods.",
+              "id": 80501
             },
             {
               "name": "Reentrancy awareness",
               "done": false,
-              "outcome": "Understand a common bug class."
+              "outcome": "Understand a common bug class.",
+              "id": 80502
             },
             {
               "name": "Testing",
               "done": false,
-              "outcome": "Verify contract behavior before deployment."
+              "outcome": "Verify contract behavior before deployment.",
+              "id": 80503
             },
             {
               "name": "Gas optimization basics",
               "done": false,
-              "outcome": "Reduce execution cost."
+              "outcome": "Reduce execution cost.",
+              "id": 80504
             },
             {
               "name": "Audit mindset",
               "done": false,
-              "outcome": "Think carefully about attack surfaces."
+              "outcome": "Think carefully about attack surfaces.",
+              "id": 80505
             }
-          ]
+          ],
+          "id": 805
         }
       ]
     }
