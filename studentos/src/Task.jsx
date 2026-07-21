@@ -42,16 +42,16 @@ function Header({setTask,text,setText,editId,setEditId,inputRef,tasks}){
 
     }
     return (
-        <div className="flex justify-center flex-col sm:flex-row max-w-4xl mx-auto items-center gap-4 sm:gap-8 p-6">
+        <div className="flex justify-center max-w-4xl mx-auto items-center gap-4 sm:gap-8 p-6">
         <input placeholder="Task" value={text} onChange={inputToTask} onKeyDown={(event)=>{
             if(event.key==="Enter"){
                 editId?editTask():addTask()
             }
-        }} ref={inputRef} className="border rounded-2xl flex-1 h-14 w-full pl-3 px-5 text-xl" />
+        }} ref={inputRef} className="border rounded-2xl w-[70%] sm:flex-1  h-14 w-full pl-3 px-5 text-xl" />
         <button onClick={editId==null? addTask : editTask} 
-        className="border-2 h-14 w-32 rounded-2xl flex justify-center items-center 
-        border-blue-50 bg-blue-500 text-white font-extrabold transition-all duration-150
-        hover:bg-blue-400 hover:border-blue-50  hover:font-black 
+        className="w-[30%] border-2 h-14 sm:w-32 rounded-3xl p-2 flex justify-center items-center 
+        border-blue-50 bg-blue-500 text-white font-semibold transition-all duration-150
+        hover:bg-blue-400 hover:border-blue-50  hover:font-semibold tracking-tight
         active:bg-blue-600 active:border-blue-200 active:-translate-y-1 "
         >{editId===null ? "+ADD" : "SAVE" }</button>
         </div>
@@ -187,8 +187,8 @@ export function Task(){
     return (
         <div className="min-h-screen bg-slate-100">
             <div className="mx-auto max-w-7xl p-4">
-                <h1 className="font-bold tracking-tighter text-center text-4xl p-1">Today's Tasks</h1>
-                <p className="font-semibold text-xl text-gray-500 text-center p-1">Orginase your day Stay productive 🚀</p>
+                <h1 className="font-bold tracking-tighter text-center text-3xl sm:text-4xl sm:p-1">Today's Tasks</h1>
+                <p className="font-semibold text-lg sm:text-xl text-gray-500 text-center sm:p-1">Orginase your day Stay productive 🚀</p>
                 <Todo />
             </div>
         </div>
