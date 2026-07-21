@@ -17,7 +17,7 @@ export function Courses(){
         const timer=setTimeout(()=>{
             courseCards();
         },200)
-        return ()=>clearInterval(timer)
+        return ()=>clearTimeout(timer)
     },[])   
 
     if(!course){
@@ -47,6 +47,7 @@ export function Courses(){
                                 <span className="text-2xl mb-2 block">{item.icon}</span>
                                 <h2 className="text-lg font-semibold text-gray-900" >{item.title}</h2>
                                 <p className="mt-2 text-sm text-gray-500" >{item.description}</p>
+                                <span className="mt-1  text-md font-bold text-gray-600">Estimated hours:{item.estimatedHours}+hr</span>
                         </Link>
                         )
                     })

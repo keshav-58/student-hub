@@ -80,7 +80,7 @@ function ShowTask({tasks,setCompeleted,text,editId,setEditId,setText,inputRef}){
                      return newState;
                     })
                 }} className={`w-8 h-8 border rounded-full ${task.compeleted?"bg-green-400":"bg-red-600"}`} >
-                    {task.compeleted?<img src={checkMark} className="w-8 h-8 -mt-4 ml-2" />:""}
+                    {task.compeleted?<img src={checkMark} alt="completed" className="w-8 h-8 -mt-4 ml-2" />:""}
                      </button> 
 
                 <span className="h-12 flex w-1/2 pt-1 text-right overflow-hidden text-3xl font-sans capitalize">{task.text}</span>
@@ -103,11 +103,11 @@ function ShowTask({tasks,setCompeleted,text,editId,setEditId,setText,inputRef}){
     )
 }
 function Todo(){
-    const [tasks,setTasks]=useState(JSON.parse(localStorage.getItem("tasks"))||[]);
+    const [tasks,setTasks]=useState(JSON.parse(sessionStorage.getItem("tasks"))||[]);
     const[text,setText]=useState("");
     const [editId,setEditId]=useState(null);
     useEffect(()=>{
-        localStorage.setItem("tasks",JSON.stringify(tasks));
+        sessionStorage.setItem("tasks",JSON.stringify(tasks));
 
     },[tasks])
     const inputRef=useRef(null)
