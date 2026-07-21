@@ -154,7 +154,7 @@ export function Calculator(){
         <div className='max-w-7xl mx-auto px-4 py-6'>
             <h1 className='text-4xl font-bold tracking-tight text-slate-900 text-center'>CALCULATOR</h1>
             <div  className='flex items-center justify-center  flex-col gap-4 mt-8'>
-                <div className='bg-slate-800 rounded-3xl shadow-2xl p-4 md:p-6 w-full max-w-[360px] sm:max-w-[430]px'>
+                <div className='bg-slate-800 rounded-3xl shadow-2xl p-4 md:p-6 w-full max-w-[360px] sm:max-w-[430px]'>
                     <Header answer={answer} setAnswer={setAnswer} />
                     <Buttons buttonValues={buttonValues} answer={answer} setAnswer={setAnswer} />
                 </div>
