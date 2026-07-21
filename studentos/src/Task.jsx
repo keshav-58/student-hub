@@ -1,6 +1,6 @@
 import { useState,useEffect,useRef } from "react";
 import checkMark from "./images/check-mark.png"
-function Header({setTask,text,setText,editId,setEditId,inputRef}){
+function Header({setTask,text,setText,editId,setEditId,inputRef,tasks}){
     
 
     function inputToTask(event){
@@ -8,17 +8,26 @@ function Header({setTask,text,setText,editId,setEditId,inputRef}){
     }
     function addTask(){
         if(text.trim()===""){
-            return;
+            alert("input is empty")
+            return
+        }
+        if(tasks.length>100){
+            alert("maximum storage reached")
+            return
+        }
+        if(tasks.some(task=>task.text===text)){
+            alert("task already exist")
+            return
         }
         setTask((prev)=> {
-            const newState=[...prev,{id:crypto.randomUUID(),text:text,compeleted:false}];
-            return newState;
+            const newState=[...prev,{id:crypto.randomUUID(),text:text.trim(),compeleted:false}]
+            return newState
     });
-        setText("");
+        setText("")
     }
     function editTask(){
         if(text.trim()===""){
-            return;
+            return
         }
         setTask((prev)=>{
             const newState = prev.map((item)=>
@@ -38,10 +47,10 @@ function Header({setTask,text,setText,editId,setEditId,inputRef}){
             }
         }} ref={inputRef} className="border rounded-2xl flex-1 h-14 pl-3 text-xl" />
         <button onClick={editId==null? addTask : editTask} 
-        className="border-2 h-14 w-30 rounded-2xl flex justify-center items-center 
+        className="border-2 h-14 w-32 rounded-2xl flex justify-center items-center 
         border-blue-50 bg-blue-500 text-white font-extrabold transition-all duration-150
         hover:bg-blue-400 hover:border-blue-50  hover:font-black 
-        active:bg-blue-600 active:border-blue-200 active:translate-y-1 "
+        active:bg-blue-600 active:border-blue-200 active:-translate-y-1 "
         >{editId===null ? "+ADD" : "SAVE" }</button>
         </div>
     )
@@ -160,7 +169,7 @@ function Todo(){
     return (
         <>
         <Header setTask={setTasks} text={text} setText={setText} editId={editId} setEditId={setEditId}
-         inputRef={inputRef} />
+         inputRef={inputRef} tasks={tasks}/>
          <div className="mx-auto max-w-4xl mt-4">
             <div className="text-right mb-4">
                 <Counts tasks={tasks}/>
