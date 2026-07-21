@@ -16,19 +16,26 @@ function Header({setTask,text,setText,editId,setEditId,inputRef,tasks}){
             return
         }
         if(tasks.some(task=>
-                task.text.toLowercase()===text.trim().toLowercase()
+                task.text.toLowerCase()===text.trim().toLowerCase()
             )){
             alert("task already exist")
             return
         }
         setTask((prev)=> {
-            const newState=[...prev,{id:crypto.randomUUID(),text:text.trim(),compeleted:false}]
+            const newState=[...prev,{id:crypto.randomUUID(),text:text.trim(),completed:false}]
             return newState
     });
         setText("")
     }
     function editTask(){
         if(text.trim()===""){
+            return
+        }
+        if(tasks.some(task=>
+                task.id!==editId&&
+                task.text.toLowerCase()===text.trim().toLowerCase()
+            )){
+            alert("task already exist")
             return
         }
         setTask((prev)=>{
@@ -47,7 +54,7 @@ function Header({setTask,text,setText,editId,setEditId,inputRef,tasks}){
             if(event.key==="Enter"){
                 editId?editTask():addTask()
             }
-        }} ref={inputRef} className="border rounded-2xl w-[70%] sm:flex-1  h-14 w-full pl-3 px-5 text-xl" />
+        }} ref={inputRef} className="border rounded-2xl w-[70%] sm:flex-1  h-14 sm:w-full pl-3 px-5 text-xl" />
         <button onClick={editId==null? addTask : editTask} 
         className="w-[30%] border-2 h-14 sm:w-32 rounded-3xl p-2 flex justify-center items-center 
         border-blue-50 bg-blue-500 text-white font-semibold transition-all duration-150
@@ -58,10 +65,10 @@ function Header({setTask,text,setText,editId,setEditId,inputRef,tasks}){
     )
 }
  
-function ShowTask({tasks,setCompeleted,text,editId,setEditId,setText,inputRef}){
+function ShowTask({tasks,setcompleted,text,editId,setEditId,setText,inputRef}){
     function delTask(id){
 
-                setCompeleted(prev=>{
+                setcompleted(prev=>{
                    const newState= prev.filter(item=> 
                         item.id!==id
                     )
@@ -87,19 +94,19 @@ function ShowTask({tasks,setCompeleted,text,editId,setEditId,setText,inputRef}){
                     <div className="rounded-xl border w-full border-slate-200 p-4 flex items-center bg-white
                                     p-4 mb-4 shadow-sm hover:shadow-lg hover:-translate-y-1">
                         <button onClick={()=>{
-                            setCompeleted( (prev) =>{
+                            setcompleted( (prev) =>{
                                 const newState= prev.map((item)=>{
-                                    return item.id === task.id?{...item,compeleted:!item.compeleted}:item 
+                                    return item.id === task.id?{...item,completed:!item.completed}:item 
                             } )
                             return newState;
                             })
-                        }} className={`w-8 h-8 border rounded-full shadow-md ${task.compeleted?"bg-emerald-500"
+                        }} className={`w-8 h-8 border rounded-full shadow-md ${task.completed?"bg-emerald-500"
                                     :"bg-red-600"}`} >
-                            {task.compeleted?<img src={checkMark} alt="completed" className="w-8 h-8 -mt-4 ml-2" />:""}
+                            {task.completed?<img src={checkMark} alt="completed" className="w-8 h-8 -mt-4 ml-2" />:""}
                             </button> 
 
                         <span className={`ml-3 flex-1 text-medium text-xl font-sans capitalize
-                                            ${task.compeleted?"line-through text-gray-400"
+                                            ${task.completed?"line-through text-gray-400"
                                             :""}`}>{task.text}</span>
                         <div className="flex gap-2 ml-auto">
                             <button onClick={()=> editTask(task.id,task.text)} className="bg-blue-500 text-white 
@@ -124,7 +131,7 @@ function ShowTask({tasks,setCompeleted,text,editId,setEditId,setText,inputRef}){
 function Counts({tasks}){
         let count=0
         tasks.forEach((item)=>{
-            if(item.compeleted===true)
+            if(item.completed===true)
                 count++
         })
         let total=tasks.length
@@ -176,7 +183,7 @@ function Todo(){
             <div className="text-right mb-4">
                 <Counts tasks={tasks}/>
             </div>
-            <ShowTask tasks={tasks} setCompeleted={setTasks} text={text} editId={editId} setEditId={setEditId} 
+            <ShowTask tasks={tasks} setcompleted={setTasks} text={text} editId={editId} setEditId={setEditId} 
             setText={setText} inputRef={inputRef} />
         </div>
         </>
@@ -188,7 +195,7 @@ export function Task(){
         <div className="min-h-screen bg-slate-100">
             <div className="mx-auto max-w-7xl p-4">
                 <h1 className="font-bold tracking-tighter text-center text-3xl sm:text-4xl sm:p-1">Today's Tasks</h1>
-                <p className="font-semibold text-lg sm:text-xl text-gray-500 text-center sm:p-1">Orginase your day Stay productive 🚀</p>
+                <p className="font-semibold text-lg sm:text-xl text-gray-500 text-center sm:p-1">Organize your day Stay productive 🚀</p>
                 <Todo />
             </div>
         </div>
