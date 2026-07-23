@@ -1,8 +1,7 @@
 import { useState,useEffect,useRef } from "react";
 import checkMark from "./images/check-mark.png"
-function Header({setTask,text,setText,editId,setEditId,inputRef,tasks}){
-    
 
+function Header({setTask,text,setText,editId,setEditId,inputRef,tasks}){    
     function inputToTask(event){
        setText(event.target.value);
     }
@@ -65,7 +64,7 @@ function Header({setTask,text,setText,editId,setEditId,inputRef,tasks}){
     )
 }
  
-function ShowTask({tasks,setcompleted,text,editId,setEditId,setText,inputRef}){
+export function ShowTask({tasks=null,setcompleted=null,text=null,editId=null,setEditId=null,setText=null,inputRef=null,showEdit=null}){
     function delTask(id){
 
                 setcompleted(prev=>{
@@ -109,11 +108,14 @@ function ShowTask({tasks,setcompleted,text,editId,setEditId,setText,inputRef}){
                                             ${task.completed?"line-through text-gray-400"
                                             :""}`}>{task.text}</span>
                         <div className="flex gap-2 ml-auto">
-                            <button onClick={()=> editTask(task.id,task.text)} className="bg-blue-500 text-white 
-                                border w-24 p-4 rounded-xl shadow-sm
-                                hover:bg-blue-400 hover:shadow-lg
-                                active:bg-blue-600  active:translate-y-[1px] active:shadow-xl" 
-                                >EDIT</button>
+                            {
+                                showEdit?<button onClick={()=> editTask(task.id,task.text)} className="bg-blue-500 text-white 
+                                    border w-24 p-4 rounded-xl shadow-sm
+                                    hover:bg-blue-400 hover:shadow-lg
+                                    active:bg-blue-600  active:translate-y-[1px] active:shadow-xl" 
+                                    >EDIT</button>:
+                                    ""
+                            }
                             <button onClick={()=> delTask(task.id)}  className="bg-red-500 text-white 
                                 border w-24 p-4 rounded-xl shadow-sm
                                 hover:bg-red-400 hover:shadow-lg
@@ -128,7 +130,7 @@ function ShowTask({tasks,setcompleted,text,editId,setEditId,setText,inputRef}){
         </>
     )
 }
-function Counts({tasks}){
+export function Counts({tasks}){
         let count=0
         tasks.forEach((item)=>{
             if(item.completed===true)
@@ -136,7 +138,7 @@ function Counts({tasks}){
         })
         let total=tasks.length
         return(
-            <div className="flex flex-row-reverse gap-4">
+            <div className="flex flex-row-reverse gap-4 ">
                 <div>
                     <button className="w-8 h-8 rounded-full border border-2 border-red-600 bg-red-500 shadow-sm
                     hover:bg-red-600 hover:border-red-400 hover:-translate-y-1 hover:shadow-md text-white
@@ -170,6 +172,7 @@ function Todo(){
     const [tasks,setTasks]=useState(JSON.parse(sessionStorage.getItem("tasks"))||[]);
     const[text,setText]=useState("");
     const [editId,setEditId]=useState(null);
+    const showEdit=true
     useEffect(()=>{
         sessionStorage.setItem("tasks",JSON.stringify(tasks));
 
@@ -184,7 +187,7 @@ function Todo(){
                 <Counts tasks={tasks}/>
             </div>
             <ShowTask tasks={tasks} setcompleted={setTasks} text={text} editId={editId} setEditId={setEditId} 
-            setText={setText} inputRef={inputRef} />
+            setText={setText} inputRef={inputRef} showEdit={showEdit} />
         </div>
         </>
     )

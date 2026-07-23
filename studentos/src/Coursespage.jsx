@@ -2,6 +2,21 @@ import {useState,useEffect} from "react"
 import { useParams } from "react-router-dom"
 import checkMark from "./images/check-mark.png"
 
+export function clickHandler(id,comp,setComp){
+    if(comp.includes(id)){
+        setComp(prev=>{
+        const updt=prev.filter(selfId=>selfId!==id)
+        sessionStorage.setItem("compId",JSON.stringify(updt))
+        return updt
+        })
+        return
+    }
+    setComp(prev=>{
+        const updt=[...prev,id]
+        sessionStorage.setItem("compId",JSON.stringify(updt))
+        return updt
+    })
+}
 function Block({idx,item,comp,setComp}){
     // function isInclude(nums,target){
     //     let state=false
@@ -12,68 +27,59 @@ function Block({idx,item,comp,setComp}){
     // })
     //     return state
     // }
-    function clickHandler(id){
-        if(comp.includes(id)){
-            setComp(prev=>{
-            const updt=prev.filter(selfId=>selfId!==id)
-            sessionStorage.setItem("compId",JSON.stringify(updt))
-            return updt
-            })
-            return
-        }
-        setComp(prev=>{
-            const updt=[...prev,id]
-            sessionStorage.setItem("compId",JSON.stringify(updt))
-            return updt
-        })
-    }
+        
     return (
-        <div className="flex flex-col gap-2 border border-gray-200 rounded-lg border-4 shadow-md transition-all
+        <div className="flex flex-col gap-1 border border-emerald-200 rounded-4xl border-4 shadow-md transition-all hover:border-green-400
                         duration-200">
-            <div className="bg-slate-100 p-8 h-full border border-gray-200 rounded-lg border-4
-                            hover:border-blue-400 hover:scale-105 hover:shadow-lg">
+            <div className="bg-green-100 p-4 rounded-4xl h-full hover:shadow-lg">
                 <h1 className="font-semibold tracking-tighter text-4xl text-center mb-2">{idx}. {item.title}</h1>
+                <div className="grid grid-cols-2">
                 {    
                     item.topics.map((subTopic,indx)=>{
                         return(
-                            <div key={subTopic.id}>
-                                <button className={`h-5 w-5 rounded-full border mr-4 mt-4 
+                            <div key={subTopic.id} className="border border-blue-100 border-4 hover:border-blue-400 bg-white p-4 rounded-4xl">
+                                <button className={`h-5 w-5 rounded-full border mr-2 
                                 ${/*isInclude(comp,subTopic.id)*/comp.includes(subTopic.id)?"bg-green-500":"bg-red-600"} `}
-                                    onClick={()=>clickHandler(subTopic.id)}
+                                    onClick={()=>clickHandler(subTopic.id,comp,setComp)}
                                     >{comp.includes(subTopic.id)?<img src={checkMark} alt="completed" className="-mt-2 ml-1" />:""}
                                     </button>
-                                <span className="font-medium text-lg text-gray-800">{subTopic.name}</span>
-                                <p className="font-normal text-md text-gray-500 pl-2">-{subTopic.outcome}</p>
+                                <span className="font-normal text-lg text-gray-800">{subTopic.name}</span>
+                                <p className="font-small text-md text-gray-500 pl-2">-{subTopic.outcome}</p>
                             </div>
                         )
                     })
                 }
+                </div>
             </div>    
         </div>
     )
 }
-function ShowData({sec,id,saved,setSaved,comp,setComp}){
-    // function storageRemover(id){
-    //     const load=JSON.parse(sessionStorage.getItem("myCoursesId"))||[]
-        
-    // }
-    const addTOCss="border bg-red-600 text-white rounded-lg h-12 px-6 font-semibold"
-    const addedCss="border bg-gray-400 text-white rounded-lg h-12 px-6 font-semibold"
-    function storageHandler(id){
+export function storageHandler(id,setSaved){
         const load=JSON.parse(sessionStorage.getItem("myCoursesId"))||[]
         if(!load.includes(id)){
             load.push(id)
             sessionStorage.setItem("myCoursesId",JSON.stringify(load))
-            setSaved(true)
+            setSaved(prev=>!prev)
             return
         }
         const upd=load.filter(selfId=> selfId!==id)
         sessionStorage.setItem("myCoursesId",JSON.stringify(upd))
-        setSaved(false)
+        setSaved(prev=>!prev)
     }
+export function ShowData({sec,id,saved,setSaved,comp,setComp}){
+    // function storageRemover(id){
+    //     const load=JSON.parse(sessionStorage.getItem("myCoursesId"))||[]
+        
+    // }
+    const addTOCss=`border border-green border-2 bg-green-500 text-white rounded-lg h-12 px-6 font-semibold cursor-pointer 
+        hover:-translate-y-1 hover:border-green-500 hover:bg-green-400
+        sctive:scale-95`
+    const addedCss=`border bg-red-500 text-white rounded-lg h-12 px-6 font-semibold cursor-pointer
+        hover:translate-y-1 hover:border-red-500 hover:bg-red-400
+        active:scale-95`
     return(
         <div>
-            <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3  ">
+            <div className="grid gap-8 grid-cols-1 md:grid-cols-2 transition-all duration-200  ">
                 {sec.map((item,idx)=>{
                     return <Block key={item.id} idx={idx+1} item={item} comp={comp} setComp={setComp} />
                 })}
@@ -90,8 +96,8 @@ function ShowData({sec,id,saved,setSaved,comp,setComp}){
                     >Add to my course</button>} */}
                     <button className={saved?addedCss:addTOCss}
                     onClick={()=>{
-                        storageHandler(id)
-                    }}>{saved?"added":"Add to my course"}</button>
+                        storageHandler(id,setSaved)
+                    }}>{saved?"Remove":"Add to Progress"}</button>
             </div>
         </div>
     )
@@ -118,9 +124,8 @@ export function Coursespg(){
             setData(req)
 
         }
-        const timer=setTimeout(()=>{courseData()},200)
-
-        return ()=>clearTimeout(timer)
+        courseData()
+        return
     },[id])
 
     if(!data){
@@ -130,7 +135,7 @@ export function Coursespg(){
     }
     return (
         <div className="min-h-screen bg-gray-100">
-            <div className="mx-auto max-w-7xl p-4 pt-4">
+            <div className="mx-auto max-w-8xl p-4 pt-2">
                 <h1 className="font-bold tracking-tighter text-4xl text-center mb-5">{data.title}</h1>
                 < ShowData sec={data.sections} id={id} saved={saved} setSaved={setSaved} comp={comp} setComp={setComp} />
             </div>

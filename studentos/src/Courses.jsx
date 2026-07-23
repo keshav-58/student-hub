@@ -11,13 +11,10 @@ export function Courses(){
 
             const res=await fetch(`${import.meta.env.BASE_URL}roadmaps/roadmaps.json`)
             const data=await res.json()
-            setCourse(data)
-            
+            setCourse(data)   
         }
-        const timer=setTimeout(()=>{
             courseCards();
-        },200)
-        return ()=>clearTimeout(timer)
+        return
     },[])   
 
     if(!course){
