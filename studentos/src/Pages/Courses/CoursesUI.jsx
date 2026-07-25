@@ -1,4 +1,4 @@
-import { Courses } from './Courses/Courses.jsx'
+import { Courses } from './Courses.jsx'
 
 export function CoursesUI(){
     return (

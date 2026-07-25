@@ -1,4 +1,4 @@
-import { Progress } from "./Progress/Progress.jsx"
+import { Progress } from "./Progress.jsx"
 
 export function ProgressUI(){
     return (

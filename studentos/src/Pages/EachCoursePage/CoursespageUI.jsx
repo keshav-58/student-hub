@@ -1,4 +1,4 @@
-import { EachCoursePage } from "./EachCoursePage/EachCoursePage.jsx"
+import { EachCoursePage } from "./EachCoursePage.jsx"
 
 export function CoursespageUI(){
     return (

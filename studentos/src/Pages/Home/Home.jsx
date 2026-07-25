@@ -1,9 +1,9 @@
 import { HomeIcon } from './HomeIcon.jsx'
-import { Container } from '../Components/Container.jsx'
-import { Loader } from '../Components/Loader.jsx'
-import { useJsonData } from '../Hooks/useJsonData.jsx'
-import { homeDataurl } from '../utils/url.js'
-import { Header } from '../Components/Header'
+import { Container } from '../../Components/Container.jsx'
+import { Loader } from '../../Components/Loader.jsx'
+import { useJsonData } from '../../Hooks/useJsonData.jsx'
+import { homeDataurl } from '../../utils/url.js'
+import { Header } from '../../Components/Header'
 
 export function Home(){
     const nav = useJsonData(homeDataurl)

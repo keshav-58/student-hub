@@ -1,4 +1,4 @@
-import { CardLink } from "../Components/CardLink"
+import { CardLink } from "../../Components/CardLink"
 
 export function CoursesIcon({course}){
     return (

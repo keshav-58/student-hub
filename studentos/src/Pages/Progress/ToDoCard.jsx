@@ -1,7 +1,7 @@
 import { useState,useEffect } from "react"
-import { ShowTask } from "../To-do-components/ShowTask"
-import { Counts } from "../To-do-components/Counts"
-import { Header } from "../Components/Header"
+import { ShowTask } from "../To-do-components/ShowTask.jsx"
+import { Counts } from "../To-do-components/Counts.jsx"
+import { Header } from "../../Components/Header.jsx"
 
 export function ToDoCard(){
     const [tasks,setTasks]=useState(JSON.parse(sessionStorage.getItem("tasks"))||[])

@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { clickHandler } from "../EachCoursePage/Block"
 import { ShowData,storageHandler } from "../EachCoursePage/ShowData.jsx"
-import { Header } from "../Components/Header.jsx"
-import checkMark from '../images/check-mark.png'
+import { Header } from "../../Components/Header.jsx"
+import checkMark from '../../images/check-mark.png'
 
 export function DataCards({id,data,setDataId,setSaved}){
     const Course = data.find(item=>item.id==id)

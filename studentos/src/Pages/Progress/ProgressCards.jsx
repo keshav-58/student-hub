@@ -1,9 +1,9 @@
 import { useState,useEffect } from "react"
-import { useJsonData } from "../Hooks/useJsonData"
-import { coursesDataurl } from "../utils/url"
+import { useJsonData } from "../../Hooks/useJsonData"
+import { coursesDataurl } from "../../utils/url"
 import { DataCards } from "./DataCards"
 import {ToDoCard} from "./ToDoCard.jsx"
-import {Loader} from "../Components/Loader.jsx"
+import {Loader} from "../../Components/Loader.jsx"
 
 export function ProgressCards(){
     const [dataId,setDataId]=useState()

@@ -1,9 +1,9 @@
 import { useState,useEffect,useRef } from "react"
 import {Counts} from './Counts.jsx'
-import {Header} from '../Components/Header.jsx'
+import {Header} from '../../Components/Header.jsx'
 import {Input} from './Input.jsx'
 import { ShowTask } from './ShowTask.jsx'
-import { Container } from "../Components/Container.jsx"
+import { Container } from "../../Components/Container.jsx"
 
 export function ToDo(){
     const heading="Today's Tasks"

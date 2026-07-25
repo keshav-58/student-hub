@@ -1,4 +1,4 @@
-import { ToDo } from './To-do-components/ToDo.jsx'
+import { ToDo } from './ToDo.jsx'
 
 export function ToDoUI(){
     

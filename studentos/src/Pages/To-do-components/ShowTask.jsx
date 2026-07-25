@@ -1,4 +1,4 @@
-import checkMark from '../images/check-mark.png'
+import checkMark from '../../images/check-mark.png'
 
 export function ShowTask({tasks=null,setcompleted=null,text=null,editId=null,setEditId=null,setText=null,inputRef=null,showEdit=null}){
     function delTask(id){

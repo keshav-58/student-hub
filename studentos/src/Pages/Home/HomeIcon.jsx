@@ -1,4 +1,4 @@
-import { CardLink } from '../Components/CardLink.jsx'
+import { CardLink } from '../../Components/CardLink.jsx'
 
 export function HomeIcon({nav}){
 

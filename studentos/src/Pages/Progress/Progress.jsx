@@ -1,6 +1,6 @@
-import { Header } from "../Components/Header"
+import { Header } from "../../Components/Header"
 import { ProgressCards } from "./ProgressCards"
-import { Container } from "../Components/Container"
+import { Container } from "../../Components/Container"
 
 export function Progress(){
     const heading="PROGRESS"

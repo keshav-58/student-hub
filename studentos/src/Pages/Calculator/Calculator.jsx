@@ -1,6 +1,6 @@
 import {useState} from 'react'
-import { Header } from '../Components/Header.jsx'
-import { Container } from '../Components/Container.jsx'
+import { Header } from '../../Components/Header.jsx'
+import { Container } from '../../Components/Container.jsx'
 import { Input } from './Input.jsx'
 import { Buttons } from './Buttons.jsx'
 

@@ -1,11 +1,11 @@
 import { ShowData } from "./ShowData.jsx"
-import {Header} from '../Components/Header.jsx'
-import {Loader} from '../Components/Loader.jsx'
-import { Container } from "../Components/Container.jsx"
+import {Header} from '../../Components/Header.jsx'
+import {Loader} from '../../Components/Loader.jsx'
+import { Container } from "../../Components/Container.jsx"
 import {useState,useEffect} from 'react'
-import {coursesDataurl} from '../utils/url.js'
+import {coursesDataurl} from '../../utils/url.js'
 import {useParams} from 'react-router-dom'
-import { useJsonData } from "../Hooks/useJsonData.jsx"
+import { useJsonData } from "../../Hooks/useJsonData.jsx"
 
 
 export function EachCoursePage(){

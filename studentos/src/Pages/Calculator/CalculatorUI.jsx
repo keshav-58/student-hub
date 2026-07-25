@@ -1,4 +1,4 @@
-import { Calculator } from "./Calculator/Calculator.jsx"
+import { Calculator } from "./Calculator.jsx"
 
 export function CalculatorUI(){
 

@@ -1,5 +1,5 @@
-import { isOperator } from "../utils/calLogic/isOperator";
-import { logic } from "../utils/calLogic/logic";
+import { isOperator } from "../../utils/calLogic/isOperator";
+import { logic } from "../../utils/calLogic/logic";
 
 export function Buttons({buttonValues,answer,setAnswer}){
     
