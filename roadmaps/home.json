@@ -20,28 +20,28 @@
       "id": 1,
       "title": "Courses",
       "icon": "📚",
-      "link": "/Courses",
+      "link": "/CourseSUI",
       "description": "Learning roadmaps"
     },
     {
       "id": 2,
       "title": "Progress",
       "icon": "📈",
-      "link": "/Progress",
+      "link": "/ProgressUI",
       "description": "Track growth"
     },
     {
       "id": 3,
       "title": "Tasks",
       "icon": "✅",
-      "link": "/Task",
+      "link": "/ToDoUI",
       "description": "Daily to-do list"
     },
     {
       "id": 4,
       "title": "Calculator",
       "icon": "🧮",
-      "link": "/Calculator",
+      "link": "/CalculatorUI",
       "description": "Quick utilities"
     },
     {
