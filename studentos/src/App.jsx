@@ -1,10 +1,10 @@
 import {Routes,Route} from 'react-router-dom'
 import {HomeUI} from './Pages/Home/HomeUI.jsx'
 import {ProgressUI} from './Pages/Progress/ProgressUI.jsx'
-import {ToDoUI} from './Pages/To-do-components/ToDoUI.jsx'
+import {ToDoUI} from './Pages/Todo/ToDoUI.jsx'
 import {CalculatorUI} from './Pages/Calculator/CalculatorUI.jsx'
-import {CoursesUI} from './Pages/courses/CoursesUI.jsx'
-import {CoursespageUI} from './Pages/EachCoursePage/CoursespageUI.jsx'
+import {CoursesUI} from './Pages/Courses/CoursesUI.jsx'
+import {CoursespageUI} from './Pages/CoursePage/CoursespageUI.jsx'
 
 function App() {
     return (

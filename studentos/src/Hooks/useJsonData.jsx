@@ -9,6 +9,6 @@ const [course,setCourse]=useState()
             setCourse(data)   
         }
             courseCards();
-    },[])
+    },[url])
     return course
 }

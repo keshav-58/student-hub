@@ -1,4 +1,4 @@
-import { Block } from "./Block"
+import { Block } from "./Block.jsx"
 
 export function storageHandler(id,setSaved){
         const load=JSON.parse(sessionStorage.getItem("myCoursesId"))||[]
@@ -16,7 +16,7 @@ export function storageHandler(id,setSaved){
 export function ShowData({sec,id,saved,setSaved,comp,setComp}){
     const addTOCss=`border border-green border-2 bg-green-500 text-white rounded-lg h-12 px-6 font-semibold cursor-pointer 
         hover:-translate-y-1 hover:border-green-500 hover:bg-green-400
-        sctive:scale-95`
+        active:scale-95`
     const addedCss=`border bg-red-500 text-white rounded-lg h-12 px-6 font-semibold cursor-pointer
         hover:translate-y-1 hover:border-red-500 hover:bg-red-400
         active:scale-95`

@@ -13,7 +13,7 @@ export function Buttons({buttonValues,answer,setAnswer}){
                     nums==="="?"bg-emerald-500 hover:bg-emerald-600 col-span-2":
                     nums==="C"?"bg-red-500 hover:bg-red-600":
                     (isOperator(nums))?"bg-blue-500 hover:bg-blue-600":
-                   nums==="0"?"col-span-2 bg-slate-700 hover:bg-slate-600 text-2x":"bg-slate-700 hover:bg-slate-600 text-2x"
+                   nums==="0"?"col-span-2 bg-slate-700 hover:bg-slate-600 text-2xl":"bg-slate-700 hover:bg-slate-600 text-2x"
                 } 
                  hover:-translate-y-1 active:scale-95 shadow-md
                 `} 

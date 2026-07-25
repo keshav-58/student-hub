@@ -12,6 +12,9 @@ export function logic(val,answer,setAnswer){
         return;
     }
     if(val==="="){
+        if(!answer.length){
+            return
+        }
         if(isInvalidInput(answer[answer.length-1],answer)){
             return
         }

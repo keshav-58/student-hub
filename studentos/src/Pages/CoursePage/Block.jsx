@@ -33,7 +33,7 @@ export function Block({idx,item,comp,setComp}){
                                     >{comp.includes(subTopic.id)?<img src={checkMark} alt="completed" className="-mt-2 ml-1" />:""}
                                     </button>
                                 <span className="font-normal text-lg text-gray-800">{subTopic.name}</span>
-                                <p className="font-small text-md text-gray-500 pl-2">-{subTopic.outcome}</p>
+                                <p className="font-light text-md text-gray-500 pl-2">-{subTopic.outcome}</p>
                             </div>
                         )
                     })

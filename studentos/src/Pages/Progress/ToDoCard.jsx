@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react"
-import { ShowTask } from "../To-do-components/ShowTask.jsx"
-import { Counts } from "../To-do-components/Counts.jsx"
+import { ShowTask } from "../Todo/ShowTask.jsx"
+import { Counts } from "../Todo/Counts.jsx"
 import { Header } from "../../Components/Header.jsx"
 
 export function ToDoCard(){

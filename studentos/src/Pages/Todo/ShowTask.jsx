@@ -37,7 +37,7 @@ export function ShowTask({tasks=null,setcompleted=null,text=null,editId=null,set
                             {task.completed?<img src={checkMark} alt="completed" className="w-8 h-8 -mt-4 ml-2" />:""}
                             </button> 
 
-                        <span className={`ml-3 flex-1 text-medium text-xl font-sans capitalize
+                        <span className={`ml-3 flex-1 font-medium text-xl font-sans capitalize
                                             ${task.completed?"line-through text-gray-400"
                                             :""}`}>{task.text}</span>
                         <div className="flex gap-2 ml-auto">

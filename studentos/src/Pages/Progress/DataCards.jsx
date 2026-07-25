@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { clickHandler } from "../EachCoursePage/Block"
-import { ShowData,storageHandler } from "../EachCoursePage/ShowData.jsx"
+import { clickHandler } from "../CoursePage/Block.jsx"
+import { ShowData,storageHandler } from "../CoursePage/ShowData.jsx"
 import { Header } from "../../Components/Header.jsx"
 import checkMark from '../../images/check-mark.png'
 
