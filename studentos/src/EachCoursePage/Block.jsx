@@ -1,3 +1,4 @@
+import checkMark from '../images/check-mark.png'
 
 export function clickHandler(id,comp,setComp){
     if(comp.includes(id)){
