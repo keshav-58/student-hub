@@ -1,25 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import {Routes,Route} from 'react-router-dom'
-import './styles/App.css'
-import {Home} from './Home.jsx'
-import {Progress} from './Progress.jsx'
-import {Task} from './Task.jsx'
-import {Calculator} from './Calculator.jsx'
-import {Courses} from './Courses.jsx'
-import {Coursespg} from './Coursespage.jsx'
+import {HomeUI} from './HomeUI.jsx'
+import {ProgressUI} from './ProgressUI.jsx'
+import {ToDoUI} from './ToDoUI.jsx'
+import {CalculatorUI} from './CalculatorUI.jsx'
+import {CoursesUI} from './CoursesUI.jsx'
+import {CoursespageUI} from './CoursespageUI.jsx'
+
 function App() {
     return (
   <Routes>
 
-    <Route path='/' element={<Home />} />
-    <Route path='/Progress' element={<Progress />} />
-    <Route path='/Task' element={<Task />} />
-    <Route path='/Calculator' element={<Calculator />} />
-    <Route path='/Courses' element={<Courses />} />
-    <Route path='/Coursespage/:id' element={<Coursespg />} />
+    <Route path='/' element={<HomeUI />} />
+    <Route path='/ProgressUI' element={<ProgressUI />} />
+    <Route path='/ToDoUI' element={<ToDoUI />} />
+    <Route path='/CalculatorUI' element={<CalculatorUI />} />
+    <Route path='/CoursesUI' element={<CoursesUI />} />
+    <Route path='/CoursespageUI/:id' element={<CoursespageUI />} />
   </Routes>
   )
 }
