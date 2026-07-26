@@ -1,22 +1,14 @@
 import checkMark from '../../images/check-mark.png'
 
-export function clickHandler(id,comp,setComp){
-    if(comp.includes(id)){
-        setComp(prev=>{
-        const updt=prev.filter(selfId=>selfId!==id)
-        sessionStorage.setItem("compId",JSON.stringify(updt))
-        return updt
-        })
+export function clickHandler(id,compeletedIds,setCompeletedIds){
+    if(compeletedIds.includes(id)){
+        setCompeletedIds(prev=>prev.filter(selfId=>selfId!==id) )
         return
     }
-    setComp(prev=>{
-        const updt=[...prev,id]
-        sessionStorage.setItem("compId",JSON.stringify(updt))
-        return updt
-    })
+    setCompeletedIds(prev=>[...prev,id])
 }
 
-export function Block({idx,item,comp,setComp}){    
+export function Block({idx,item,compeletedIds,setCompeletedIds}){    
     return (
         <div className="flex flex-col gap-1 border border-emerald-200 rounded-4xl border-4 shadow-md transition-all hover:border-green-400
                         duration-200">
@@ -28,9 +20,9 @@ export function Block({idx,item,comp,setComp}){
                         return(
                             <div key={subTopic.id} className="border border-blue-100 border-4 hover:border-blue-400 bg-white p-4 rounded-4xl">
                                 <button className={`h-5 w-5 rounded-full border mr-2 
-                                ${comp.includes(subTopic.id)?"bg-green-500":"bg-red-600"} `}
-                                    onClick={()=>clickHandler(subTopic.id,comp,setComp)}
-                                    >{comp.includes(subTopic.id)?<img src={checkMark} alt="completed" className="-mt-2 ml-1" />:""}
+                                ${compeletedIds.includes(subTopic.id)?"bg-green-500":"bg-red-600"} `}
+                                    onClick={()=>clickHandler(subTopic.id,compeletedIds,setCompeletedIds)}
+                                    >{compeletedIds.includes(subTopic.id)?<img src={checkMark} alt="completed" className="-mt-2 ml-1" />:""}
                                     </button>
                                 <span className="font-normal text-lg text-gray-800">{subTopic.name}</span>
                                 <p className="font-light text-md text-gray-500 pl-2">-{subTopic.outcome}</p>

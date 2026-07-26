@@ -1,19 +1,7 @@
 import { Block } from "./Block.jsx"
+import { storageHandler } from "../../utils/course/storageHandler.js"
 
-export function storageHandler(id,setSaved){
-        const load=JSON.parse(sessionStorage.getItem("myCoursesId"))||[]
-        if(!load.includes(id)){
-            load.push(id)
-            sessionStorage.setItem("myCoursesId",JSON.stringify(load))
-            setSaved(prev=>!prev)
-            return
-        }
-        const upd=load.filter(selfId=> selfId!==id)
-        sessionStorage.setItem("myCoursesId",JSON.stringify(upd))
-        setSaved(prev=>!prev)
-}
-
-export function ShowData({sec,id,saved,setSaved,comp,setComp}){
+export function ShowData({sec,id,saved,setSaved,compeletedIds,setCompeletedIds}){
     const addTOCss=`border border-green border-2 bg-green-500 text-white rounded-lg h-12 px-6 font-semibold cursor-pointer 
         hover:-translate-y-1 hover:border-green-500 hover:bg-green-400
         active:scale-95`
@@ -24,7 +12,7 @@ export function ShowData({sec,id,saved,setSaved,comp,setComp}){
         <div>
             <div className="grid gap-8 grid-cols-1 md:grid-cols-2 transition-all duration-200  ">
                 {sec.map((item,idx)=>{
-                    return <Block key={item.id} idx={idx+1} item={item} comp={comp} setComp={setComp} />
+                    return <Block key={item.id} idx={idx+1} item={item} compeletedIds={compeletedIds} setCompeletedIds={setCompeletedIds} />
                 })}
             </div>
             <div className="text-center p-12" >

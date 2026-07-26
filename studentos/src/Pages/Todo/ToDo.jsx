@@ -4,18 +4,21 @@ import {Header} from '../../Components/Header.jsx'
 import {Input} from './Input.jsx'
 import { ShowTask } from './ShowTask.jsx'
 import { Container } from "../../Components/Container.jsx"
+import { useStorage } from "../../Hooks/useStorage.jsx"
 
 export function ToDo(){
     const heading="Today's Tasks"
     const extraInfo="Organize your day Stay productive 🚀"
-    const [tasks,setTasks]=useState(JSON.parse(sessionStorage.getItem("tasks"))||[]);
+    const id="tasks"
     const[text,setText]=useState("");
     const [editId,setEditId]=useState(null);
     const showEdit=true
-    useEffect(()=>{
-        sessionStorage.setItem("tasks",JSON.stringify(tasks));
+    const {tasks,setTasks} = useStorage(id)
 
-    },[tasks])
+    // const [tasks,setTasks]=useState(JSON.parse(sessionStorage.getItem("tasks"))||[]);
+    // useEffect(()=>{
+    //     sessionStorage.setItem("tasks",JSON.stringify(tasks));
+    // },[tasks])
     const inputRef=useRef(null)
 
     return (

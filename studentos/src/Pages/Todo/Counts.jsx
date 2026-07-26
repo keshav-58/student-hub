@@ -1,4 +1,5 @@
 export function Counts({tasks}){
+    
     let count=0
     tasks.forEach((item)=>{
         if(item.completed===true)

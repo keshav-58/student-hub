@@ -2,7 +2,7 @@ import { isOperator } from "./isOperator";
 import { isInvalidInput } from "./isInvalidInput";
 import { answerCollector } from "./answerCollector";
 
-export function logic(val,answer,setAnswer){
+export function handleCalculatorInput(val,answer,setAnswer){
     if(val==="C"){
         setAnswer("")
         return;

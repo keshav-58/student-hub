@@ -1,11 +1,11 @@
-import { isOperator } from "../../utils/calLogic/isOperator";
-import { logic } from "../../utils/calLogic/logic";
+import { isOperator } from "../../utils/calLogic/isOperator.js";
+import { handleCalculatorInput } from "../../utils/calLogic/handleCalculatorInput.js";
 
 export function Buttons({buttonValues,answer,setAnswer}){
     
     return <div className='grid grid-cols-4 gap-3'>
         {buttonValues.map(nums=><button key={nums} value={nums}
-            onClick={()=>logic(nums,answer,setAnswer)} 
+            onClick={()=>handleCalculatorInput(nums,answer,setAnswer)} 
 
             className={`
                 h-16 sm:h-20 rounded-2xl text-white font-semibold transition-all duration-300

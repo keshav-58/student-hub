@@ -25,24 +25,24 @@
     },
     {
       "id": 2,
-      "title": "Progress",
-      "icon": "📈",
-      "link": "/ProgressUI",
-      "description": "Track growth"
+      "title": "Calculator",
+      "icon": "🧮",
+      "link": "/CalculatorUI",
+      "description": "Quick utilities"
     },
     {
       "id": 3,
-      "title": "Tasks",
+      "title": "To-Do",
       "icon": "✅",
       "link": "/ToDoUI",
       "description": "Daily to-do list"
     },
     {
       "id": 4,
-      "title": "Calculator",
-      "icon": "🧮",
-      "link": "/CalculatorUI",
-      "description": "Quick utilities"
+      "title": "Progress",
+      "icon": "📈",
+      "link": "/ProgressUI",
+      "description": "Track growth"
     },
     {
       "id": 5,
