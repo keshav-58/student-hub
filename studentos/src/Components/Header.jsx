@@ -1,5 +1,6 @@
 
 export function Header({heading,extraInfo}) {
+
     return (
         <>
             <h1 className="font-bold tracking-tighter text-center text-3xl sm:text-4xl sm:p-1">{heading}</h1>

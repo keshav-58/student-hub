@@ -17,6 +17,12 @@ export function ShowTask({tasks=null,setcompleted=null,text=null,editId=null,set
         setText(text);
         inputRef.current.focus()
     }
+    if(!tasks.length){
+        return (
+            <h1 className='text-center text-blue-300 text-bold text-8xl border rounded bg-blue-100 min-h-screen border-4 border-b-0 border-x-0
+                p-12 '> + Add Some Tasks</h1>
+        )
+    }
     return (
         <>
         {
