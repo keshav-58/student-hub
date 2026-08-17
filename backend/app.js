@@ -5,7 +5,10 @@ const Todo = require("./models/Todo")
 const taskRoutes = require("./TODObackend/controllers.js")
 const {router : roadmapsRoutes } = require("./courses/allcourses.js")
 const courseByIdRoutes = require("./courses/courseById.js")
+const cors = require("cors")
 const app=express()
+
+app.use(cors())
 
 app.use(express.json())
 
