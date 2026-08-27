@@ -1,4 +1,5 @@
 import { handleInputButton } from "./handleInputButton"
+import { handleInputKeyDown } from "./handleInputKeyDown"
 
 export function Input({setInput,input,setEditId,editId,setNotify,setTasks}){
     
@@ -8,7 +9,8 @@ export function Input({setInput,input,setEditId,editId,setNotify,setTasks}){
     return (
         <div className="flex items-center gap-4 mx-auto items-center max-w-4xl py-4" >
             <input placeholder="Add some tasks" onChange={inputToTask}  value={input} 
-                    className="w-[70%] sm:flex-1 border rounded-2xl text-2xl pl-4 py-3 font-medium"  />
+                    className="w-[70%] sm:flex-1 border rounded-2xl text-2xl pl-4 py-3 font-medium" 
+                    onKeyDown={(event)=>handleInputKeyDown(event,input,setEditId,editId,setNotify,setTasks,setInput)} />
 
             <button onClick={ () => {handleInputButton(input,setEditId,editId,setNotify,setTasks,setInput)}}
                 className="p-4 sm:p-4 md-p-8 bg-blue-500 rounded-xl 

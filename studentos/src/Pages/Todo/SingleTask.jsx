@@ -4,7 +4,7 @@ import {handleEditButton} from "./handleEditButton.jsx"
 import { handleDeleteButton } from './handleDeleteButton.jsx'
 import { handleIsCompeleted } from './handleIsCompeleted.jsx'
 
-export function SingleTask({singleTask,setEditId,setTasks,setNotify}) {
+export function SingleTask({singleTask,setEditId,setTasks,setNotify,setInput}) {
 
     return (
         <div className='flex flex-col gap-2 p-2 w-full'>
@@ -18,7 +18,7 @@ export function SingleTask({singleTask,setEditId,setTasks,setNotify}) {
                             ${singleTask.completed?"line-through text-gray-400":""}`}
                             >{singleTask.text}
                 </span>
-                <Button colour={"blue"} clickHandler={()=>{handleEditButton(singleTask._id,setTasks,setEditId)}} >EDIT</Button>
+                <Button colour={"blue"} clickHandler={()=>{handleEditButton(singleTask._id,singleTask.text,setInput,setEditId)}} >EDIT</Button>
                 <Button colour={"red"} clickHandler={()=>handleDeleteButton(singleTask._id,setTasks,setNotify)} >DEL</Button>
             </div>
         </div>

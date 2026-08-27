@@ -34,7 +34,7 @@ export function ToDo(){
         <Container>
             <Header heading={heading} extraInfo={extraInfo} />
             <Input setInput={setInput} input={input} setEditId={setEditId} editId={editId} setNotify={setNotify} setTasks={setTasks} />
-            <ShowTask tasks={tasks} setEditId={setEditId} setTasks={setTasks} setNotify={setNotify} />
+            <ShowTask tasks={tasks} setEditId={setEditId} setTasks={setTasks} setNotify={setNotify} setInput={setInput} />
             <Notification notify={notify} setNotify={setNotify} />
         </Container>
     )
