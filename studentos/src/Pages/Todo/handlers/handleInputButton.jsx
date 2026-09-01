@@ -1,7 +1,7 @@
 import axios from "axios"
-import { sucessfull } from "./sucess"
-import { unsucessfull } from "./unsucess"
-import { url } from "./ToDo"
+import { sucessfull } from "../sucess"
+import { unsucessfull } from "../unsucess"
+import { url } from "../ToDo"
 
 export function handleInputButton(input,setEditId,editId,setNotify,setTasks,setInput) {
     const result = validateFrontEndInput(input)

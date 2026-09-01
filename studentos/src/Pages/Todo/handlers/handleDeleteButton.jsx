@@ -1,7 +1,7 @@
 import axios from "axios"
-import { sucessfull } from "./sucess"
-import { unsucessfull } from "./unsucess"
-import { url } from "./ToDo"
+import { sucessfull } from "../sucess"
+import { unsucessfull } from "../unsucess"
+import { url } from "../ToDo"
 
 async function deleteTask(id,setTasks,setNotify){
     const res = await axios.delete(`${url}/${id}`)

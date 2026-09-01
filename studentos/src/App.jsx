@@ -5,6 +5,7 @@ import {ToDoUI} from './Pages/Todo/ToDoUI.jsx'
 import {CalculatorUI} from './Pages/Calculator/CalculatorUI.jsx'
 import {CoursesUI} from './Pages/Courses/CoursesUI.jsx'
 import {CoursespageUI} from './Pages/CoursePage/CoursespageUI.jsx'
+import {AuthUI} from './Pages/Authentication/AuthUI.jsx'
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
     <Route path='/CalculatorUI' element={<CalculatorUI />} />
     <Route path='/CoursesUI' element={<CoursesUI />} />
     <Route path='/CoursespageUI/:id' element={<CoursespageUI />} />
+    <Route path='/Authentication' element={<AuthUI />} />
   </Routes>
   )
 }

@@ -1,5 +1,5 @@
-import { handleInputButton } from "./handleInputButton"
-import { handleInputKeyDown } from "./handleInputKeyDown"
+import { handleInputButton } from "./handlers/handleInputButton"
+import { handleInputKeyDown } from "./handlers/handleInputKeyDown"
 
 export function Input({setInput,input,setEditId,editId,setNotify,setTasks}){
     

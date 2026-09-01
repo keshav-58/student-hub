@@ -8,7 +8,7 @@ export function Counts({tasks}){
     let total=tasks.length
     
     return(
-        <div className="flex flex-row-reverse gap-4 ">
+        <div className="flex flex-row-reverse max-w-4xl mx-auto gap-4 ">
             <div>
                 <button className="w-8 h-8 rounded-full border border-2 border-red-600 bg-red-500 shadow-sm
                 hover:bg-red-600 hover:border-red-400 hover:-translate-y-1 hover:shadow-md text-white

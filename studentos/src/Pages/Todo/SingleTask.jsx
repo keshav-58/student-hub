@@ -1,8 +1,8 @@
 import checkMark from '../../images/check-mark.png'
 import { Button } from '../../Components/Button.jsx'
-import {handleEditButton} from "./handleEditButton.jsx"
-import { handleDeleteButton } from './handleDeleteButton.jsx'
-import { handleIsCompeleted } from './handleIsCompeleted.jsx'
+import {handleEditButton} from "./handlers/handleEditButton.jsx"
+import { handleDeleteButton } from './handlers/handleDeleteButton.jsx'
+import { handleIsCompeleted } from './handlers/handleIsCompeleted.jsx'
 
 export function SingleTask({singleTask,setEditId,setTasks,setNotify,setInput}) {
 

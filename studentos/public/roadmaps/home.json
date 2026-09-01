@@ -45,7 +45,7 @@
       "description": "Track growth"
     },
     {
-      "id": 5,
+      "id": 11,
       "title": "Timetable",
       "icon": "🗓️",
       "link": "/Timetable",
@@ -85,6 +85,12 @@
       "icon": "⚙️",
       "link": "/Settings",
       "description": "Customize app"
+    },{
+      "id": 5,
+      "title": "Authentication",
+      "icon": "⚙️",
+      "link": "/Authentication",
+      "description": "Login or Register Yourself "
     }
     ]
 }

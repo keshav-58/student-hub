@@ -1,5 +1,5 @@
 import axios from "axios"
-import { url } from "./ToDo"
+import { url } from "../ToDo"
 
 
 async function isCompeleted(id,setTasks,singleTask) {
