@@ -1,10 +1,8 @@
-import axios from "axios"
 import { sucessfull } from "../sucess"
 import { unsucessfull } from "../unsucess"
-import { url } from "../ToDo"
-
+import api from "../../../axiosInstance"
 async function deleteTask(id,setTasks,setNotify){
-    const res = await axios.delete(`${url}/${id}`)
+    const res = await api.delete(`/tasks/${id}`)
 
     if(res.status !== 200){
         return unsucessfull(setNotify)

@@ -1,10 +1,8 @@
-import axios from 'axios'
-
-const url = "http://localhost:3000/api/v1/auth/register"
+import api from '../../../axiosInstance'
 
 async function registerBackend(formData,initialFormData,setFormData,navigate) {
     try {
-        const res = await axios.post(url,formData)
+        const res = await api.post("/register",formData)
         console.log("sucess res",res.data)
         setFormData(initialFormData)
         navigate(-1)

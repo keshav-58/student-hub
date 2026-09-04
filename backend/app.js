@@ -1,5 +1,4 @@
 require("dotenv").config()
-const authentication=require("./auth/auth.js")
 const express = require("express")
 const connectDb = require("./mongodb")
 const Todo = require("./models/Todo")
@@ -9,15 +8,18 @@ const courseByIdRoutes = require("./courses/courseById.js")
 const cookiePraser = require("cookie-parser")
 const cors = require("cors")
 const app=express()
-const gu = require("./auth/getAllUsers.js")
-app.use(cors())
+const authenticationRoutes = require("./authentication/authenticationBackend.js")
+
+app.use(cors({
+    origin:"http://localhost:5173",
+    credentials:true
+}))
 
 app.use(express.json())
 app.use(cookiePraser())
 
-app.use("/api/v1",taskRoutes,roadmapsRoutes,courseByIdRoutes)
-app.post("/api/v1/auth/register",authentication)
-app.get("/api/v1/gu",gu)
+app.use("/api/v1",authenticationRoutes,taskRoutes,roadmapsRoutes,courseByIdRoutes)
+
 
 const start = async () =>{
     try {

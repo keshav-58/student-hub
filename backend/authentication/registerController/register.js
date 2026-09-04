@@ -1,8 +1,8 @@
 const jwt = require("jsonwebtoken")
-const users = require("../models/user.js")
+const users = require("../../models/user.js")
 require("dotenv").config()
 
-async function authentication(req,res,next){
+async function registerUser(req,res,next){
 
     try {
         const newUser = await users.create(req.body)
@@ -20,4 +20,4 @@ async function authentication(req,res,next){
 
 }
 
-module.exports=authentication
+module.exports=registerUser

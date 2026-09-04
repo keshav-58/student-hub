@@ -10,9 +10,10 @@ const initialFormData={
         luckyNumber:""
     }
 export function RegisterForm({setShowLogin}){
-    const [formData,setFormData]
-    =useState(initialFormData)
-    const navigate = useNavigate()
+    const [formData,setFormData] = useState(initialFormData)
+    
+    const navigate = useNavigate() 
+
     function handleChange(e){
         const {name,value}=e.target
         setFormData((prev)=>({...prev,[name]:value}))

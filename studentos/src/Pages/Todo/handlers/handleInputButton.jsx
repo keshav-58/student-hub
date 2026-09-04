@@ -1,7 +1,6 @@
-import axios from "axios"
 import { sucessfull } from "../sucess"
 import { unsucessfull } from "../unsucess"
-import { url } from "../ToDo"
+import api from "../../../axiosInstance"
 
 export function handleInputButton(input,setEditId,editId,setNotify,setTasks,setInput) {
     const result = validateFrontEndInput(input)
@@ -18,8 +17,9 @@ export function handleInputButton(input,setEditId,editId,setNotify,setTasks,setI
 }
 
 async function  addTask(input,setTasks,setNotify,setInput) {
-    const res=await fetch(url,{
+    const res=await fetch("http://localhost:3000/api/v1/tasks",{
         method:"POST",
+        credentials:"include",
         headers:{
             "Content-Type" : "application/json"
         },
@@ -30,6 +30,7 @@ async function  addTask(input,setTasks,setNotify,setInput) {
 
     if(!res.ok){
         unsucessfull(setNotify)
+        console.log(res)
         return
     }  
 
@@ -42,7 +43,7 @@ async function  addTask(input,setTasks,setNotify,setInput) {
 }
 
 async function editTask(input,setEditId,setTasks,setNotify,setInput,editId) {
-    const res = await axios.patch(`${url}/${editId}`,{
+    const res = await api.patch(`/tasks/${editId}`,{
         "text":input
     })
     if(res.status !== 200){

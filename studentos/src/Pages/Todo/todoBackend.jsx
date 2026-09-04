@@ -11,9 +11,11 @@ export function useTodoBackend(url){
             setStatusError(null)
             try {
 
-                const response = await fetch(url)
+                const response = await fetch(url,{
+                    credentials:"include"
+                })
                 if(!response.ok){
-                    setStatusError(response.status)
+                    setStatusError(response)
                     return
                 }
                 const todoData = await response.json()

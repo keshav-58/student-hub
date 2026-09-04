@@ -1,16 +1,16 @@
-import axios from 'axios'
+import api from '../../../axiosInstance'
 
-const url = "http://localhost:3000/api/v1/auth/login"
-
-async function loginBackend(formData) {
+async function loginBackend(formData,initialFormData,setFormData,navigate) {
     try {
-        const res = await axios.post(url,formData)
+        const res = await api.post("/login",formData)
         console.log("sucess res",res.data)
+        setFormData(initialFormData)
+        navigate(-1)
     } catch (error) {
         console.log("error",error.response?.data)
     }
 }
-export function handleLoginSubmit(e,formData){
+export function handleLoginSubmit(e,formData,initialFormData,setFormData,navigate){
     e.preventDefault()
-    loginBackend(formData)
+    loginBackend(formData,initialFormData,setFormData,navigate)
 }

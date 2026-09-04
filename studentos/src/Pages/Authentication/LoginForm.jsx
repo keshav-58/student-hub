@@ -3,18 +3,19 @@ import { formBoxCss,formCss,formElementCss,
         formElementBoxCss,notSubmitCss,labelCss,
         inputCss,changeLtRCss } from "./RegisterForm"
 import { switchLoginRegister } from "./handlers/switchLoginRegister"
+import { useNavigate } from "react-router-dom"
+import { handleLoginSubmit } from "./handlers/handleLoginSubmit"
 
-export function LoginForm({setShowLogin}){
-    const [formData,setFormData]
-        =useState({
+
+const initialFormData = {
             userName:"",
             password:""
-        })
-        function handleSubmit(e){
-            e.preventDefault()
-            console.log("sucessfull submit",formData)
         }
+export function LoginForm({setShowLogin}){
+    const [formData,setFormData] = useState(initialFormData)
     
+    const navigate = useNavigate()
+
         function handleChange(e){
             const {name,value}=e.target
             setFormData((prev)=>({...prev,[name]:value}))
@@ -22,7 +23,7 @@ export function LoginForm({setShowLogin}){
         }
     return (
         <div className={formBoxCss} >
-            <form onSubmit={handleSubmit} className={formCss} >
+            <form onSubmit={(e)=>handleLoginSubmit(e,formData,initialFormData,setFormData,navigate)} className={formCss} >
                 <div className={formElementBoxCss}>
                     <div className={formElementCss}>
                         <label className={labelCss}>UserName :</label>
@@ -37,7 +38,8 @@ export function LoginForm({setShowLogin}){
                 </div>
                 <div className={formElementCss}>
                     <button type="submit" className={notSubmitCss} >Login</button>
-                    <button type="button" className={changeLtRCss} onClick={()=>switchLoginRegister(setShowLogin)} >Register</button>
+                    <button type="button" className={changeLtRCss}
+                         onClick={()=>switchLoginRegister(setShowLogin)} >Register</button>
                 </div>
             </form>
         </div>

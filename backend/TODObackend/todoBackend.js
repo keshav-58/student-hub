@@ -2,6 +2,7 @@ const express = require("express")
 const router = express.Router()
 const Todo = require("../models/Todo.js")
 const jwt = require("jsonwebtoken")
+const authenticateUser = require("../authentication/authenticateUser.js")
 
 const {getAllTask,
         addTasks,
@@ -12,8 +13,8 @@ const {getAllTask,
 
 
         
-router.route("/tasks").get(getAllTask).post(addTasks)
-router.route("/tasks/:id").patch(updateTasks).delete(deleteTasks)
+router.route("/tasks").get(authenticateUser,getAllTask).post(authenticateUser,addTasks)
+router.route("/tasks/:id").patch(authenticateUser,updateTasks).delete(authenticateUser,deleteTasks)
 
 module.exports=router
 

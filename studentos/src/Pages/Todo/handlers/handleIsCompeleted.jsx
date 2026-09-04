@@ -1,9 +1,7 @@
-import axios from "axios"
-import { url } from "../ToDo"
-
+import api from "../../../axiosInstance"
 
 async function isCompeleted(id,setTasks,singleTask) {
-    const res = await axios.patch(`${url}/${id}`,{
+    const res = await api.patch(`/tasks/${id}`,{
         completed: !singleTask.completed
     })
 
