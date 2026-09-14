@@ -1,11 +1,17 @@
 import checkMark from '../../images/check-mark.png'
 import { Button } from '../../Components/Button.jsx'
-import {handleEditButton} from "./handlers/handleEditButton.jsx"
 import { handleDeleteButton } from './handlers/handleDeleteButton.jsx'
 import { handleIsCompeleted } from './handlers/handleIsCompeleted.jsx'
+import { useNotification } from "../../NotificationProvider"
 
-export function SingleTask({singleTask,setEditId,setTasks,setNotify,setInput}) {
+export function SingleTask({singleTask,setEditId,setTasks,setInput}) {
 
+    const {notify} = useNotification()
+    
+    function handleEditButton(id,editText,setInput,setEditId) {
+        setEditId(id)
+        setInput(editText)
+    }
     return (
         <div className='flex flex-col gap-2 p-2 w-full'>
             <div className='flex w-full max-w-4xl p-2 gap-1 rounded-xl mx-auto p-4 bg-gray-50 shadow-md
@@ -19,7 +25,7 @@ export function SingleTask({singleTask,setEditId,setTasks,setNotify,setInput}) {
                             >{singleTask.text}
                 </span>
                 <Button colour={"blue"} clickHandler={()=>{handleEditButton(singleTask._id,singleTask.text,setInput,setEditId)}} >EDIT</Button>
-                <Button colour={"red"} clickHandler={()=>handleDeleteButton(singleTask._id,setTasks,setNotify)} >DEL</Button>
+                <Button colour={"red"} clickHandler={()=>handleDeleteButton(singleTask._id,setTasks,notify)} >DEL</Button>
             </div>
         </div>
     )

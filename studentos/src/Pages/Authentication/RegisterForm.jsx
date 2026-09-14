@@ -2,6 +2,7 @@ import { useState } from "react"
 import { handleRegisterSubmit } from "./handlers/handleRegisterSubmit"
 import { switchLoginRegister } from "./handlers/switchLoginRegister"
 import { useNavigate } from "react-router-dom"
+import { useAuth } from "../../authProvider"
 
 const initialFormData={
         name:"",
@@ -10,6 +11,7 @@ const initialFormData={
         luckyNumber:""
     }
 export function RegisterForm({setShowLogin}){
+    const {login} = useAuth()
     const [formData,setFormData] = useState(initialFormData)
     
     const navigate = useNavigate() 
@@ -20,7 +22,7 @@ export function RegisterForm({setShowLogin}){
     }
     return (
         <div className={formBoxCss} >
-            <form onSubmit={(e)=>handleRegisterSubmit(e,formData,initialFormData,setFormData,navigate)} className={formCss} >
+            <form onSubmit={(e)=>handleRegisterSubmit(e,formData,initialFormData,setFormData,navigate,login)} className={formCss} >
                 <div className={formElementBoxCss}>
                     <div className={formElementCss}>
                         <label className={labelCss}>Name :</label>

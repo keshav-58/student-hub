@@ -1,16 +1,19 @@
 import api from '../../../axiosInstance'
 
-async function loginBackend(formData,initialFormData,setFormData,navigate) {
+async function loginBackend(formData,initialFormData,setFormData,navigate,login) {
     try {
         const res = await api.post("/login",formData)
-        console.log("sucess res",res.data)
         setFormData(initialFormData)
-        navigate(-1)
+        login(res.data.message)
+        if(window.history.length > 1)
+            navigate(-1)
+        else
+            navigate("/")
     } catch (error) {
         console.log("error",error.response?.data)
     }
 }
-export function handleLoginSubmit(e,formData,initialFormData,setFormData,navigate){
+export function handleLoginSubmit(e,formData,initialFormData,setFormData,navigate,login){
     e.preventDefault()
-    loginBackend(formData,initialFormData,setFormData,navigate)
+    loginBackend(formData,initialFormData,setFormData,navigate,login)
 }

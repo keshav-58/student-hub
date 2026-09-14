@@ -19,8 +19,8 @@ const login = async (req,res) => {
             process.env.JWT_SECRET,
             {"expiresIn":"7d"}
         )
-        res.cookie("token",newToken,{httpOnly:true,secure:false})
-        return res.status(200).json({message:"sucess"})
+        res.cookie("token",newToken,{httpOnly:true})
+        return res.status(200).json({message:"sucess",newToken,user: {name : registeredUser.userName }})
     } catch (error) {
         return res.status(500).json({message:"server error",error:error.message})
     }

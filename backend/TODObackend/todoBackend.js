@@ -9,10 +9,7 @@ const {getAllTask,
         updateTasks,
         deleteTasks
         } = require("./controllers/controllers.js")
-
-
-
-        
+       
 router.route("/tasks").get(authenticateUser,getAllTask).post(authenticateUser,addTasks)
 router.route("/tasks/:id").patch(authenticateUser,updateTasks).delete(authenticateUser,deleteTasks)
 

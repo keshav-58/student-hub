@@ -13,7 +13,7 @@ async function registerUser(req,res,next){
         )
 
         res.cookie("token",token,{httpOnly:true})
-        res.status(201).json({message:"sucess generation",token})
+        res.status(201).json({message:"sucess generation",token,user :{name : newUser.userName} })
     } catch (err) {
         res.status(500).json({error:err.message})
     }

@@ -1,12 +1,10 @@
-import { useState,useEffect,useRef } from "react"
+import { useState } from "react"
 import {Counts} from './Counts.jsx'
 import {Header} from '../../Components/Header.jsx'
 import {Input} from './Input.jsx'
 import { ShowTask } from './ShowTask.jsx'
 import { Container } from "../../Components/Container.jsx"
-import { useStorage } from "../../Hooks/useStorage.jsx"
 import { useTodoBackend } from "./todoBackend.jsx"
-import { Notification } from "./Notification.jsx"
 import {Loader} from "../../Components/Loader.jsx"
 
 export const url = "http://localhost:3000/api/v1/tasks"
@@ -22,7 +20,6 @@ export function ToDo(){
     
     const [input,setInput] = useState("")    
     const [editId,setEditId] = useState(null)
-    const [notify,setNotify] = useState(null)
 
     if(isLoading){
         return (
@@ -34,10 +31,9 @@ export function ToDo(){
         <Container>
             <Header heading={heading} extraInfo={extraInfo} />
             <Input setInput={setInput} input={input} setEditId={setEditId} 
-                    editId={editId} setNotify={setNotify} setTasks={setTasks} />
+                    editId={editId} setTasks={setTasks} />
             <Counts tasks={tasks} />
-            <ShowTask tasks={tasks} setEditId={setEditId} setTasks={setTasks} setNotify={setNotify} setInput={setInput} />
-            <Notification notify={notify} setNotify={setNotify} />
+            <ShowTask tasks={tasks} setEditId={setEditId} setTasks={setTasks} setInput={setInput} />
         </Container>
     )
     

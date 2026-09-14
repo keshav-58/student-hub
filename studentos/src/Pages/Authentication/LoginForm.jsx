@@ -5,6 +5,7 @@ import { formBoxCss,formCss,formElementCss,
 import { switchLoginRegister } from "./handlers/switchLoginRegister"
 import { useNavigate } from "react-router-dom"
 import { handleLoginSubmit } from "./handlers/handleLoginSubmit"
+import { useAuth } from "../../authProvider"
 
 
 const initialFormData = {
@@ -12,6 +13,7 @@ const initialFormData = {
             password:""
         }
 export function LoginForm({setShowLogin}){
+    const {login} = useAuth()
     const [formData,setFormData] = useState(initialFormData)
     
     const navigate = useNavigate()
@@ -23,7 +25,7 @@ export function LoginForm({setShowLogin}){
         }
     return (
         <div className={formBoxCss} >
-            <form onSubmit={(e)=>handleLoginSubmit(e,formData,initialFormData,setFormData,navigate)} className={formCss} >
+            <form onSubmit={(e)=>handleLoginSubmit(e,formData,initialFormData,setFormData,navigate,login)} className={formCss} >
                 <div className={formElementBoxCss}>
                     <div className={formElementCss}>
                         <label className={labelCss}>UserName :</label>

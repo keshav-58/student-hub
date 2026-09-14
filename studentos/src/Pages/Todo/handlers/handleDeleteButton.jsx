@@ -1,22 +1,21 @@
-import { sucessfull } from "../sucess"
-import { unsucessfull } from "../unsucess"
 import api from "../../../axiosInstance"
-async function deleteTask(id,setTasks,setNotify){
+
+async function deleteTask(id,setTasks,notify){
     const res = await api.delete(`/tasks/${id}`)
 
     if(res.status !== 200){
-        return unsucessfull(setNotify)
+        return notify(res.data.message)
     }
 
     setTasks(prev => {
         return prev.filter(task => task._id !== id)
     })
-    sucessfull(setNotify)
+    notify(res.data.message)
 }
 
-export function handleDeleteButton(id,setTasks,setNotify) {
+export function handleDeleteButton(id,setTasks,notify) {
     if(!id){
-        return sucessfull(setNotify)
+        return notify("no id")
     }
-    deleteTask(id,setTasks,setNotify)
+    deleteTask(id,setTasks,notify)
 }

@@ -1,22 +1,22 @@
-import { sucessfull } from "../sucess"
-import { unsucessfull } from "../unsucess"
 import api from "../../../axiosInstance"
 
-export function handleInputButton(input,setEditId,editId,setNotify,setTasks,setInput) {
+
+export function handleInputButton(input,setEditId,editId,notify,setTasks,setInput) {
+    
     const result = validateFrontEndInput(input)
     if(!result){
-        unsucessfull(setNotify)
+        notify("invalid input")
         return
     }
     if(!editId){
-        addTask(input,setTasks,setNotify,setInput)
+        addTask(input,setTasks,notify,setInput)
         return
     }
-    editTask(input,setEditId,setTasks,setNotify,setInput,editId)
+    editTask(input,setEditId,setTasks,notify,setInput,editId)
 
 }
 
-async function  addTask(input,setTasks,setNotify,setInput) {
+async function  addTask(input,setTasks,notify,setInput) {
     const res=await fetch("http://localhost:3000/api/v1/tasks",{
         method:"POST",
         credentials:"include",
@@ -27,34 +27,32 @@ async function  addTask(input,setTasks,setNotify,setInput) {
             text:input
         })
     })
-
-    if(!res.ok){
-        unsucessfull(setNotify)
-        console.log(res)
-        return
-    }  
-
     const data= await res.json()
+
+     if(!res.ok){
+        notify(data.message)
+        return
+    }
 
     setTasks(prev=>[...prev,data])
     setInput("")
 
-    sucessfull(setNotify)  
+    notify(data.message) 
 }
 
-async function editTask(input,setEditId,setTasks,setNotify,setInput,editId) {
+async function editTask(input,setEditId,setTasks,notify,setInput,editId) {
     const res = await api.patch(`/tasks/${editId}`,{
         "text":input
     })
     if(res.status !== 200){
-        return unsucessfull(setNotify)
+        return notify(res.data.message)
     }
     setTasks(prev=>{
         return prev.map( task => String(task._id) === String(editId) ?{...task,text:input}:task)
     })
     setInput("")
     setEditId(null)
-    sucessfull(setNotify)
+    notify(res.data.message)
 }
 function validateFrontEndInput(input) {
     if(input.length<3){

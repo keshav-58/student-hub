@@ -1,13 +1,13 @@
 import { SingleTask } from './SingleTask.jsx'
 
-export function ShowTask({tasks,setTasks,setNotify,setEditId,setInput}){
+export function ShowTask({tasks,setTasks,setEditId,setInput}){
     return (
         <>
             {
                 tasks.map(singleTask => {
                    return (
                         <SingleTask key={singleTask._id} singleTask={singleTask} 
-                                    setTasks={setTasks} setNotify={setNotify}
+                                    setTasks={setTasks}
                                     setEditId={setEditId} setInput={setInput} />
                    )
                 })
