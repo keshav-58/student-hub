@@ -12,7 +12,7 @@ const heading = "Today's Tasks";
 const extraInfo = "Organize your day Stay productive 🚀";
 
 export function ToDo() {
-  const { statusError, tasks, setTasks, isLoading } = useTodoBackend(url);
+  const { statusError, tasks, setTasks, isLoading } = useTodoBackend();
 
   const [input, setInput] = useState("");
   const [editId, setEditId] = useState(null);
@@ -42,36 +42,3 @@ export function ToDo() {
   );
 }
 
-// export function ToDo(){
-//     const heading="Today's Tasks"
-//     const extraInfo="Organize your day Stay productive 🚀"
-//     const id="tasks"
-//     const[text,setText]=useState("");
-//     const [editId,setEditId]=useState(null);
-//     const showEdit=true
-//     const {tasks,setTasks} = useStorage(id)
-
-//     // const [tasks,setTasks]=useState(JSON.parse(sessionStorage.getItem("tasks"))||[]);
-//     // useEffect(()=>{
-//     //     sessionStorage.setItem("tasks",JSON.stringify(tasks));
-//     // },[tasks])
-//     const inputRef=useRef(null)
-
-//     return (
-//         <Container>
-//             <Header heading={heading} extraInfo={extraInfo} />
-
-//             <Input setTask={setTasks} text={text} setText={setText} editId={editId} setEditId={setEditId}
-//             inputRef={inputRef} tasks={tasks}/>
-
-//             <div className="mx-auto max-w-4xl mt-4">
-//                 <div className="text-right mb-4">
-//                     <Counts tasks={tasks}/>
-//                 </div>
-
-//                 <ShowTask tasks={tasks} setcompleted={setTasks} text={text} editId={editId} setEditId={setEditId}
-//                 setText={setText} inputRef={inputRef} showEdit={showEdit} />
-//             </div>
-//         </Container>
-//     )
-// }

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import api from "../../axiosInstance.jsx";
-export function useTodoBackend(url) {
+
+export function useTodoBackend() {
   const [statusError, setStatusError] = useState(null);
   const [tasks, setTasks] = useState([]);
   const [isLoading, setLoading] = useState(true);
@@ -10,7 +11,7 @@ export function useTodoBackend(url) {
       setLoading(true);
       setStatusError(null);
       try {
-        const response = await api.get(url);
+        const response = await api.get("/tasks");
         if (!response.status === 200) {
           setStatusError(response);
           return;
@@ -24,7 +25,7 @@ export function useTodoBackend(url) {
       }
     }
     fetchTodoBackend();
-  }, [url]);
+  }, []);
 
   return { statusError, tasks, setTasks, isLoading };
 }

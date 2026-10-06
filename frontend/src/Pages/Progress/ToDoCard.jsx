@@ -1,11 +1,11 @@
 import { ShowTask } from "../Todo/ShowTask.jsx";
 import { Counts } from "../Todo/Counts.jsx";
 import { Header } from "../../Components/Header.jsx";
-import { usetodoBackend } from "../usetodoBackend.jsx";
+import { useTodoBackend } from "../Todo/todoBackend.jsx";
 import { Loader } from "../../Components/Loader.jsx";
 
 export function ToDoCard() {
-  const { tasks, setTasks,isLoading } = usetodoBackend()
+  const { tasks, setTasks,isLoading } = useTodoBackend()
   const showEdit = false;
 
   if(isLoading){
@@ -15,7 +15,11 @@ export function ToDoCard() {
   }
   return (
     <div className="mx-auto max-w-4xl mt-4 max-h-[500px] overflow-y-auto">
-      <Header heading={"Today's Tasks "} />
+      <div className="flex-1">
+          <h1 className="font-bold tracking-tighter text-center text-3xl sm:text-4xl sm:p-1">
+            "Today's Tasks"
+          </h1>
+        </div>
       <div className="text-right my-4 p-4">
         <Counts tasks={tasks} />
       </div>
