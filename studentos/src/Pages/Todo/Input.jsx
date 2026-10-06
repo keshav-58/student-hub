@@ -1,75 +1,65 @@
-import { handleInputButton } from "./handlers/handleInputButton"
-import { useNotification } from "../../NotificationProvider"
+import { handleInputButton } from "./handlers/handleInputButton";
+import { useNotification } from "../../NotificationProvider";
 
-export function Input({setInput,input,setEditId,editId,setTasks}){
-    
-    const inputToTask = (event) => {
-        setInput(event.target.value)
+export function Input({ setInput, input, setEditId, editId, setTasks }) {
+  const inputToTask = (event) => {
+    setInput(event.target.value);
+  };
+  const { notify } = useNotification();
+
+  function handleInputKeyDown(
+    event,
+    input,
+    setEditId,
+    editId,
+    notify,
+    setTasks,
+    setInput,
+  ) {
+    if (event.key === "Enter") {
+      return handleInputButton(
+        input,
+        setEditId,
+        editId,
+        notify,
+        setTasks,
+        setInput,
+      );
     }
-    const {notify} = useNotification()
+  }
+  return (
+    <div className="flex items-center gap-4 mx-auto items-center max-w-4xl py-4">
+      <input
+        placeholder="Add some tasks"
+        onChange={inputToTask}
+        value={input}
+        className="w-[70%] sm:flex-1 border rounded-2xl text-2xl pl-4 py-3 font-medium"
+        onKeyDown={(event) => handleInputKeyDown(event)}
+      />
 
-    function handleInputKeyDown(event,input,setEditId,editId,notify,setTasks,setInput){
-    if(event.key === "Enter"){
-        return handleInputButton(input,setEditId,editId,notify,setTasks,setInput)
-    }
-}
-    return (
-        <div className="flex items-center gap-4 mx-auto items-center max-w-4xl py-4" >
-            <input placeholder="Add some tasks" onChange={inputToTask}  value={input} 
-                    className="w-[70%] sm:flex-1 border rounded-2xl text-2xl pl-4 py-3 font-medium" 
-                    onKeyDown={(event)=>handleInputKeyDown(event)} />
-
-            <button onClick={ () => {handleInputButton(input,setEditId,editId,notify,setTasks,setInput)}}
-                className="p-4 sm:p-4 md-p-8 bg-blue-500 rounded-xl 
+      <button
+        onClick={() => {
+          handleInputButton(
+            input,
+            setEditId,
+            editId,
+            notify,
+            setTasks,
+            setInput,
+          );
+        }}
+        className="p-4 sm:p-4 md-p-8 bg-blue-500 rounded-xl 
                                 text-white font-semibold shadow-sm my-auto cursor-pointer
                                 hover:scale-105 hover:bg-blue-400 hover:shadow:md
-                                active:scale-95">
-                {editId?"Save":"+ADD"}
-                </button>        
-        </div>
-    )
+                                active:scale-95"
+      >
+        {editId ? "Save" : "+ADD"}
+      </button>
+    </div>
+  );
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// export function Input({setTask,text,setText,editId,setEditId,inputRef,tasks}){    
+// export function Input({setTask,text,setText,editId,setEditId,inputRef,tasks}){
 //     function inputToTask(event){
 //        setText(event.target.value);
 //     }
@@ -107,7 +97,7 @@ export function Input({setInput,input,setEditId,editId,setTasks}){
 //         }
 //         setTask((prev)=>{
 //             const newState = prev.map((item)=>
-//                 editId===item.id?{...item,text:text.trim()}:item 
+//                 editId===item.id?{...item,text:text.trim()}:item
 //             )
 //             return newState;
 //         })
@@ -121,8 +111,8 @@ export function Input({setInput,input,setEditId,editId,setTasks}){
 //                     editId?editTask():addTask()
 //                 }
 //             }} ref={inputRef} className="border rounded-2xl w-[70%] sm:flex-1  h-14 sm:w-full pl-3 px-5 text-xl" />
-//             <button onClick={editId==null? addTask : editTask} 
-//             className="w-[30%] border-2 h-14 sm:w-32 rounded-3xl p-2 flex justify-center items-center 
+//             <button onClick={editId==null? addTask : editTask}
+//             className="w-[30%] border-2 h-14 sm:w-32 rounded-3xl p-2 flex justify-center items-center
 //             border-blue-50 bg-blue-500 text-white font-semibold transition-all duration-150
 //             hover:bg-blue-400 hover:border-blue-50  hover:font-semibold tracking-tight
 //             active:bg-blue-600 active:border-blue-200 active:-translate-y-1 "
@@ -130,4 +120,3 @@ export function Input({setInput,input,setEditId,editId,setTasks}){
 //         </div>
 //     )
 // }
- 

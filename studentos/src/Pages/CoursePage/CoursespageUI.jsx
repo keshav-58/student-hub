@@ -1,7 +1,5 @@
-import { EachCoursePage } from "./EachCoursePage.jsx"
+import { EachCoursePage } from "./EachCoursePage.jsx";
 
-export function CoursespageUI(){
-    return (
-        <EachCoursePage />
-    )
+export function CoursespageUI() {
+  return <EachCoursePage />;
 }

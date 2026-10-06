@@ -1,35 +1,43 @@
-require("dotenv").config()
-const express = require("express")
-const connectDb = require("./mongodb")
-const Todo = require("./models/Todo")
-const taskRoutes = require("./TODObackend/todoBackend.js")
-const {router : roadmapsRoutes } = require("./courses/allcourses.js")
-const courseByIdRoutes = require("./courses/courseById.js")
-const cookiePraser = require("cookie-parser")
-const cors = require("cors")
-const app=express()
-const authenticationRoutes = require("./authentication/authenticationBackend.js")
+require("dotenv").config();
+const express = require("express");
+const connectDb = require("./mongodb");
+const taskRoutes = require("./TODObackend/todoBackend.js");
+const { router: roadmapsRoutes } = require("./courses/allcourses.js");
+const courseByIdRoutes = require("./courses/courseById.js");
+const cookiePraser = require("cookie-parser");
+const cors = require("cors");
+const app = express();
+const authenticationRoutes = require("./authentication/authenticationBackend.js");
+const homeBackend = require("./homeBackend/homeBackend.js");
 
-app.use(cors({
-    origin:"http://localhost:5173",
-    credentials:true
-}))
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  }),
+);
 
-app.use(express.json())
-app.use(cookiePraser())
+app.use(express.json());
+app.use(cookiePraser());
 
-app.use("/api/v1",authenticationRoutes,taskRoutes,roadmapsRoutes,courseByIdRoutes)
+app.use(
+  "/api/v1",
+  courseByIdRoutes,
+  roadmapsRoutes,
+  authenticationRoutes,
+  taskRoutes,
+  homeBackend,
+);
 
+const start = async () => {
+  try {
+    await connectDb(process.env.MONGO_URI);
+    app.listen(process.env.PORT, () => {
+      console.log(`server is listning on port ${process.env.PORT}...`);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-const start = async () =>{
-    try {
-        await connectDb(process.env.MONGO_URI)
-        app.listen(process.env.PORT,()=>{
-            console.log(`server is listning on port ${process.env.PORT}...`)
-        })
-    } catch (error) {
-        console.log(error)
-    }
-}
-
-start()
+start();

@@ -1,7 +1,5 @@
-import { Courses } from './Courses.jsx'
+import { Courses } from "./Courses.jsx";
 
-export function CoursesUI(){
-    return (
-        <Courses />
-    )
+export function CoursesUI() {
+  return <Courses />;
 }

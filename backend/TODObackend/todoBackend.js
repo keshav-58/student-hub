@@ -1,26 +1,26 @@
-const express = require("express")
-const router = express.Router()
-const Todo = require("../models/Todo.js")
-const jwt = require("jsonwebtoken")
-const authenticateUser = require("../authentication/authenticateUser.js")
+const express = require("express");
+const router = express.Router();
+const Todo = require("../models/Todo.js");
+const jwt = require("jsonwebtoken");
+const authenticateUser = require("../authentication/authenticateUser.js");
 
-const {getAllTask,
-        addTasks,
-        updateTasks,
-        deleteTasks
-        } = require("./controllers/controllers.js")
-       
-router.route("/tasks").get(authenticateUser,getAllTask).post(authenticateUser,addTasks)
-router.route("/tasks/:id").patch(authenticateUser,updateTasks).delete(authenticateUser,deleteTasks)
+const {
+  getAllTask,
+  addTasks,
+  updateTasks,
+  deleteTasks,
+} = require("./controllers/controllers.js");
 
-module.exports=router
+router
+  .route("/tasks")
+  .get(authenticateUser, getAllTask)
+  .post(authenticateUser, addTasks);
+router
+  .route("/tasks/:id")
+  .patch(authenticateUser, updateTasks)
+  .delete(authenticateUser, deleteTasks);
 
-
-
-
-
-
-
+module.exports = router;
 
 // router.get("/tasks", async (req,res)=>{
 //     try {
@@ -67,4 +67,3 @@ module.exports=router
 //         res.status(500).json({message : "internal error"})
 //     }
 // })
-

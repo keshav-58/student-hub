@@ -10,10 +10,7 @@
       "difficulty": "Beginner → Advanced",
       "estimatedHours": 220,
       "description": "Frontend, backend, database, authentication, APIs, and deployment for internship-ready web apps.",
-      "prerequisites": [
-        "Basic computer usage",
-        "Logical thinking"
-      ],
+      "prerequisites": ["Basic computer usage", "Logical thinking"],
       "sections": [
         {
           "title": "Web Foundations",
@@ -430,20 +427,14 @@
               "name": "Todo app",
               "done": false,
               "outcome": "Task CRUD with filters and localStorage.",
-              "projects": [
-                "Smart Todo",
-                "Study Todo"
-              ],
+              "projects": ["Smart Todo", "Study Todo"],
               "id": 10801
             },
             {
               "name": "Expense tracker",
               "done": false,
               "outcome": "Track income, expenses, balances, categories.",
-              "projects": [
-                "Student Finance",
-                "Budget Tracker"
-              ],
+              "projects": ["Student Finance", "Budget Tracker"],
               "id": 10802
             },
             {
@@ -477,11 +468,7 @@
       "difficulty": "Beginner → Advanced",
       "estimatedHours": 280,
       "description": "Patterns, problem solving, and interview preparation in C++.",
-      "prerequisites": [
-        "C++ basics",
-        "Functions",
-        "STL basics"
-      ],
+      "prerequisites": ["C++ basics", "Functions", "STL basics"],
       "sections": [
         {
           "title": "Complexity and Recursion",
@@ -883,10 +870,7 @@
       "difficulty": "Intermediate",
       "estimatedHours": 90,
       "description": "Processes, threads, scheduling, synchronization, memory, and files.",
-      "prerequisites": [
-        "Basic computer architecture",
-        "Logical reasoning"
-      ],
+      "prerequisites": ["Basic computer architecture", "Logical reasoning"],
       "sections": [
         {
           "title": "Introduction",
@@ -1126,10 +1110,7 @@
       "difficulty": "Intermediate",
       "estimatedHours": 85,
       "description": "How a computer executes instructions and organizes hardware components.",
-      "prerequisites": [
-        "Number system basics",
-        "Logic basics"
-      ],
+      "prerequisites": ["Number system basics", "Logic basics"],
       "sections": [
         {
           "title": "Number Systems and Logic",
@@ -1321,10 +1302,7 @@
       "difficulty": "Beginner → Intermediate",
       "estimatedHours": 100,
       "description": "Relational modeling, transactions, and querying structured data.",
-      "prerequisites": [
-        "Logic basics",
-        "Basic data structures"
-      ],
+      "prerequisites": ["Logic basics", "Basic data structures"],
       "sections": [
         {
           "title": "DBMS Fundamentals",
@@ -1540,10 +1518,7 @@
       "difficulty": "Intermediate",
       "estimatedHours": 80,
       "description": "Networking concepts, protocols, addressing, routing, and performance.",
-      "prerequisites": [
-        "Basic OS knowledge",
-        "Basic internet usage"
-      ],
+      "prerequisites": ["Basic OS knowledge", "Basic internet usage"],
       "sections": [
         {
           "title": "Networking Basics",
@@ -1729,11 +1704,7 @@
       "difficulty": "Intermediate → Advanced",
       "estimatedHours": 220,
       "description": "Data handling, model training, evaluation, deep learning, and AI projects.",
-      "prerequisites": [
-        "Python basics",
-        "Math basics",
-        "Statistics basics"
-      ],
+      "prerequisites": ["Python basics", "Math basics", "Statistics basics"],
       "sections": [
         {
           "title": "Python for Data Work",

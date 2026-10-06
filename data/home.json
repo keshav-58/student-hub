@@ -1,5 +1,5 @@
 {
-  "app": {
+    "app": {
     "name": "Student Hub",
     "slug": "student-hub",
     "version": "1.0.0",
@@ -15,7 +15,7 @@
       "mutedText": "gray-500"
     }
   },
-  "navigation": [
+"navigation": [
     {
       "id": 1,
       "title": "Courses",
@@ -85,13 +85,12 @@
       "icon": "⚙️",
       "link": "/Settings",
       "description": "Customize app"
-    },
-    {
+    },{
       "id": 5,
       "title": "Authentication",
       "icon": "⚙️",
       "link": "/Authentication",
       "description": "Login or Register Yourself "
     }
-  ]
+    ]
 }

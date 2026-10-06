@@ -1,9 +1,5 @@
-import { ToDo } from './ToDo.jsx'
+import { ToDo } from "./ToDo.jsx";
 
-export function ToDoUI(){
-    
-    return (
-        <ToDo />   
-    )
-
+export function ToDoUI() {
+  return <ToDo />;
 }

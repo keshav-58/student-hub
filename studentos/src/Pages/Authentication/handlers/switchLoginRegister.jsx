@@ -1,4 +1,3 @@
-
-export function switchLoginRegister(setShowLogin){
-    setShowLogin(prev=>!prev)
+export function switchLoginRegister(setShowLogin) {
+  setShowLogin((prev) => !prev);
 }

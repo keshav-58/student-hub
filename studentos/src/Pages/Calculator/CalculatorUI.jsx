@@ -1,8 +1,5 @@
-import { Calculator } from "./Calculator.jsx"
+import { Calculator } from "./Calculator.jsx";
 
-export function CalculatorUI(){
-
-    return (
-        <Calculator />
-    )
+export function CalculatorUI() {
+  return <Calculator />;
 }
