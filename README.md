@@ -1,6 +1,6 @@
 # STUDENT-HUB
 
-    A fullstack stuedent productivity and learning platform built to bring everyday tools into one place
+    A fullstack student productivity and learning platform built to bring everyday tools into one place
 
 It is a fullstack web app designed for studnets who wants to manage their tasks,courses,learning roadmaps and progress from a single platform .
 
