@@ -4,7 +4,7 @@ import { handleDeleteButton } from "./handlers/handleDeleteButton.jsx";
 import { handleIsCompeleted } from "./handlers/handleIsCompeleted.jsx";
 import { useNotification } from "../../NotificationProvider";
 
-export function SingleTask({ singleTask, setEditId, setTasks, setInput }) {
+export function SingleTask({ singleTask, setEditId, setTasks, setInput,showEdit }) {
   const { notify } = useNotification();
 
   function handleEditButton(id, editText, setInput, setEditId) {
@@ -35,7 +35,7 @@ export function SingleTask({ singleTask, setEditId, setTasks, setInput }) {
         >
           {singleTask.text}
         </span>
-        <Button
+        {showEdit && (<Button
           colour={"blue"}
           clickHandler={() => {
             handleEditButton(
@@ -47,7 +47,8 @@ export function SingleTask({ singleTask, setEditId, setTasks, setInput }) {
           }}
         >
           EDIT
-        </Button>
+        </Button>)
+        }
         <Button
           colour={"red"}
           clickHandler={() =>

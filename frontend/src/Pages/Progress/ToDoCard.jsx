@@ -1,15 +1,18 @@
-import { useState, useEffect } from "react";
 import { ShowTask } from "../Todo/ShowTask.jsx";
 import { Counts } from "../Todo/Counts.jsx";
 import { Header } from "../../Components/Header.jsx";
-import { useStorage } from "../../Hooks/useStorage.jsx";
+import { usetodoBackend } from "../usetodoBackend.jsx";
+import { Loader } from "../../Components/Loader.jsx";
 
 export function ToDoCard() {
-  const id = "tasks";
-  const { tasks, setTasks } = useStorage(id);
-  const [text, setText] = useState("");
-  const [editId, setEditId] = useState(null);
+  const { tasks, setTasks,isLoading } = usetodoBackend()
   const showEdit = false;
+
+  if(isLoading){
+    return (
+      <Loader />
+    )
+  }
   return (
     <div className="mx-auto max-w-4xl mt-4 max-h-[500px] overflow-y-auto">
       <Header heading={"Today's Tasks "} />
@@ -18,12 +21,9 @@ export function ToDoCard() {
       </div>
       <ShowTask
         tasks={tasks}
-        setcompleted={setTasks}
-        text={text}
-        setText={setText}
+        setEditId={null}
+        setTasks={setTasks}
         showEdit={showEdit}
-        editId={editId}
-        setEditId={setEditId}
       />
     </div>
   );
