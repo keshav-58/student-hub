@@ -17,7 +17,7 @@
   },
 "navigation": [
     {
-      "id": 1,
+      "id": 4,
       "title": "Courses",
       "icon": "📚",
       "link": "/CourseSUI",
@@ -38,7 +38,7 @@
       "description": "Daily to-do list"
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "Progress",
       "icon": "📈",
       "link": "/ProgressUI",
@@ -86,7 +86,7 @@
       "link": "/Settings",
       "description": "Customize app"
     },{
-      "id": 5,
+      "id": 1,
       "title": "Authentication",
       "icon": "⚙️",
       "link": "/Authentication",
